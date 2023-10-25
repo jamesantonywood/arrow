@@ -65,11 +65,50 @@ register_deactivation_hook( __FILE__, 'deactivate_c12_elementor_plugin' );
 require plugin_dir_path( __FILE__ ) . 'includes/class-c12-elementor-plugin.php';
 
 
+/** !! Registering Category Files
+ * 
+ * Want to move this to a better place... if there is one...
+ */
+add_action( 'elementor/elements/categories_registered', function(\Elementor\Elements_Manager $elements_manager ) {
+	//add our categories
+	$category_prefix = 'c12-';
+	$elements_manager->add_category(
+		$category_prefix . 'widgets',
+		[
+			'title' => 'Curious12 Widgets',
+			'icon' => 'fa fa-plug',
+		]
+	);
+
+	//hack into the private $categories member, and reorder it so our stuff is at the top
+	$reorder_cats = function() use($category_prefix) {
+		uksort($this->categories, function($keyOne, $keyTwo) use($category_prefix) {
+			if(substr($keyOne, 0, 4) == $category_prefix) {
+				return -1;
+			}
+			if(substr($keyTwo, 0, 4) == $category_prefix) {
+				return 1;
+			}
+			return 0;
+		});
+	};
+	$reorder_cats->call($elements_manager);
+});
+
 /** !! Registering Widget Files
  * 
  * Want to move this to a better place... if there is one...
  */
+function register_hello_world_widget( $widgets_manager ) {
 
+	require_once(__DIR__ . '/widgets/hello-world-widget-1.php');
+	require_once(__DIR__ . '/widgets/hello-world-widget-2.php');
+
+	$widgets_manager->register( new \Elementor_Hello_World_Widget_1() );
+	$widgets_manager->register( new \Elementor_Hello_World_Widget_2() );
+
+}
+add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
 
 
 /**
