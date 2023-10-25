@@ -1,4 +1,7 @@
 <?php
+
+
+
 class Elementor_Hello_World_Widget_2 extends \Elementor\Widget_Base {
 
     public function get_name() {
