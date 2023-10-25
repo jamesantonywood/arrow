@@ -88,11 +88,17 @@ class C12_Elementor_Plugin_Elementor {
     public function register_widgets( $widgets_manager ) {
         require_once(__DIR__ . '/includes/widgets/hello-world-widget-1.php');
         require_once(__DIR__ . '/includes/widgets/hello-world-widget-2.php');
+        require_once(__DIR__ . '/includes/widgets/oembed-widget.php');
 
 
         // examples
         $widgets_manager->register( new \Elementor_Hello_World_Widget_1() );
         $widgets_manager->register( new \Elementor_Hello_World_Widget_2() );
+        $widgets_manager->register( new \Elementor_oEmbed_Widget() );
+
+    }
+
+    public function register_controls() {
 
     }
 

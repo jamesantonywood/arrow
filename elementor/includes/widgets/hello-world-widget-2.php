@@ -1,5 +1,7 @@
 <?php
-
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 
 class Elementor_Hello_World_Widget_2 extends \Elementor\Widget_Base {
