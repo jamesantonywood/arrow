@@ -1,4 +1,6 @@
 <?php
+
+
 class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
 
     public function get_name() {
@@ -15,6 +17,7 @@ class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
 
     public function get_categories() {
         return ['c12-widgets'];
+        // return ['basic'];
     }
 
     public function get_keywords() {

@@ -78,7 +78,7 @@ class C12_Elementor_Plugin {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
-
+		$this->define_elementor_hooks();
 	}
 
 	/**
@@ -122,8 +122,13 @@ class C12_Elementor_Plugin {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-c12-elementor-plugin-public.php';
 
-		$this->loader = new C12_Elementor_Plugin_Loader();
+		/**
+		 * The class responsible for defining all actions that occur within and extend Elementor
+		 * 
+		 */
+		require_once plugin_dir_path( dirname(__FILE__) ) . 'elementor/class-c12-elementor-plugin-elementor.php';
 
+		$this->loader = new C12_Elementor_Plugin_Loader();
 	}
 
 	/**
@@ -173,6 +178,13 @@ class C12_Elementor_Plugin {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+	}
+
+
+	private function define_elementor_hooks() {
+		$plugin_elementor = new C12_Elementor_Plugin_Elementor($this->get_plugin_name(), $this->get_version());
+		$this->loader->add_action( 'elementor/widgets/register', $plugin_elementor, 'register_widgets' );
+		$this->loader->add_action('elementor/elements/categories_registered', $plugin_elementor, 'register_categories' );
 	}
 
 	/**
