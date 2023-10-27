@@ -103,9 +103,7 @@ class Elementor_oEmbed_Widget extends \Elementor\Widget_Base {
 				'placeholder' => esc_html__( 'https://your-link.com', 'elementor-oembed-widget' ),
 			]
 		);
-
 		$this->end_controls_section();
-
     }
 
     /**
