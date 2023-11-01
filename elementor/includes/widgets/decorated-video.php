@@ -28,7 +28,7 @@ class C12_Decorated_Video extends \Elementor\Widget_Base {
     }
 
     public function get_style_depends() {
-        return ['c12-decorated-video-styles'];
+        return ['c12-widget-styles'];
     }
 
     protected function register_controls() {

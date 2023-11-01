@@ -28,7 +28,7 @@ class C12_Page_Header extends \Elementor\Widget_Base {
     }
 
     public function get_style_depends() {
-        return ['c12-page-header-styles'];
+        return ['c12-widget-styles'];
     }
 
     protected function register_controls() {
