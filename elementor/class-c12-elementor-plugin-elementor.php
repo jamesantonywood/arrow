@@ -86,20 +86,28 @@ class C12_Elementor_Plugin_Elementor {
 	 * Register all of C12s Custom Widgets
 	 */
     public function register_widgets( $widgets_manager ) {
-        require_once(__DIR__ . '/includes/widgets/hello-world-widget-1.php');
-        require_once(__DIR__ . '/includes/widgets/hello-world-widget-2.php');
-        require_once(__DIR__ . '/includes/widgets/oembed-widget.php');
+        require_once(__DIR__ . '/includes/widgets/page-header.php');
+        $widgets_manager->register( new \C12_Page_Header() );
 
+        require_once(__DIR__ . '/includes/widgets/decorated-video.php');
+        $widgets_manager->register( new \C12_Decorated_Video() );
 
-        // examples
-        $widgets_manager->register( new \Elementor_Hello_World_Widget_1() );
-        $widgets_manager->register( new \Elementor_Hello_World_Widget_2() );
-        $widgets_manager->register( new \Elementor_oEmbed_Widget() );
+        require_once(__DIR__ . '/includes/widgets/accreditation-logos.php');
+        $widgets_manager->register( new \C12_Accreditation_Logos() );
 
     }
 
     public function register_controls() {
 
+    }
+
+    // TODO: Solution for this
+    // !! This needs to be better - I think it would be best to have a single css file loaded and compiled via sass. 
+    // Same Idea with handling scripts I don't like the idea of individually loading everything.
+    public function register_styles() {
+        // Widget Specific Styles
+        wp_register_style( 'c12-page-header-styles', plugins_url( '/assets/css/page-header.css', __FILE__ ) );
+        wp_register_style( 'c12-decorated-video-styles', plugins_url( '/assets/css/decorated-video.css', __FILE__ ) );
     }
 
 }

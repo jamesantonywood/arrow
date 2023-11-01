@@ -1,0 +1,55 @@
+@keyframes rotate {
+    0% {
+       transform: rotate(234deg); 
+    }
+    100% {
+        transform: rotate(594deg);
+    }
+}
+
+.c12-page-header {
+    min-height: 16em;
+    height: 50vh;
+    max-height: 450px;
+
+    padding: 9rem var(--c12-default-padding) var(--c12-default-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.c12-page-header svg {
+    /* border: 1px solid red; */
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    translate: -50% -50%;
+    scale: 1.1;
+    animation: rotate 120s infinite linear;
+}
+
+.c12-page-header h1 {
+    z-index: 1;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 976px) {
+    .c12-page-header svg {
+        left: unset;
+        right: 0;
+        translate: 0 -50%;
+    }
+}
+
+@media screen and (min-width: 1344px) {
+    .c12-page-header {
+        overflow: visible;
+        overflow-y: clip;
+    }
+}
