@@ -1,11 +1,4 @@
-@keyframes rotate {
-    0% {
-       transform: rotate(234deg); 
-    }
-    100% {
-        transform: rotate(594deg);
-    }
-}
+
 
 .c12-page-header {
     min-height: 16em;
@@ -20,16 +13,55 @@
     overflow: hidden;
     max-width: 1280px;
     margin: 0 auto;
+    z-index: 0;
     svg {
         /* border: 1px solid red; */
         position: absolute;
         z-index: 0;
-        top: 50%;
-        left: 50%;
-        transform-origin: center;
-        translate: -50% -50%;
-        scale: 1.1;
-        animation: rotate 120s infinite linear;
+
+        &.burst {
+            animation: rotate 120s infinite linear;
+            top: 59%;
+            left: 50%;
+            transform-origin: center;
+            translate: -50% -50%;
+            scale: 1.2;
+        }
+
+        &.houses {
+            right: -260px;
+            bottom: 60px;
+        }
+        &.car, &.van {
+            .wheel-1, .wheel-2 {
+                transform-box: fill-box;
+                transform-origin: center;
+            }
+        }
+        &.car {
+            right: 100%;
+        }
+        &.van {
+            left: 100%;
+            scale: -1 1;
+        }
+        &.vacancies {
+            right: -180px;
+            bottom: -40px;
+        }
+        &.contact {
+            right: -430px;
+        }
+        &.news {
+            right: -30%;
+        }
+        &.heart {
+            right: -70px;
+            bottom: -70px;
+        }
+
+
+        // transform: rotate(234deg); 
     }
 
     h1 {
@@ -39,14 +71,33 @@
 
     @media screen and (min-width: 976px) {
         svg {
-            left: unset;
-            right: 0;
-            translate: 0 -50%;
+            &.burst {
+                left: unset;
+                right: 0;
+                translate: 0 -50%;
+            }
+            &.houses {
+                right: 80px;
+                bottom: -30px;
+            }
+            &.vacancies {
+                right: 30px;
+            }
+            &.contact {
+                right: -40px;
+            }
+            &.news {
+                right: 10%;
+            }
+            &.heart {
+                right: 50px;
+                bottom: -80px;
+            }
         }
     }
 
     @media screen and (min-width: 1344px) {
-        overflow: visible;
-        overflow-y: clip;
+        overflow: visible clip;
+        overflow-y: clip; 
     }
 }

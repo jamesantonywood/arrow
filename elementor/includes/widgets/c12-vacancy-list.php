@@ -4,32 +4,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-class C12_Accreditation_Logos extends \Elementor\Widget_Base {
+class C12_Vacancy_List extends \Elementor\Widget_Base {
 
     public function get_name() {
-        return 'accreditation_logos';
+        return 'c12_vacancy_list';
     }
 
     public function get_title() {
-        return esc_html__('Accredittion Logos', 'c12-elementor-plugin');
+        return esc_html__('Vacancy List', 'c12-elementor-plugin');
     }
 
     public function get_icon() {
-        return 'eicon-code';
+        return 'eicon-toggle';
     }
 
     public function get_categories() {
         return ['c12-widgets'];
-        // return ['basic'];
     }
 
     public function get_keywords() {
-        return ['accreditation', 'logos'];
+        return ['vacancy', 'vacancies'];
     }
 
-    // public function get_style_depends() {
-    //     return ['c12-decorated-video-styles'];
-    // }
+    public function get_style_depends() {
+        return ['c12-widget-styles'];
+    }
 
     protected function register_controls() {
         
@@ -38,8 +37,8 @@ class C12_Accreditation_Logos extends \Elementor\Widget_Base {
     protected function render() {
         $settings = $this->get_settings_for_display();
         ?>
-            <div class="c12-accreditation-logos">
-                <p>I will be the Accreditation Logos widget!</p>
+            <div class="c12-vacancy-list">
+                <p>I will be the Vacancy List Widget!</p>
             </div>
         <?php
     }

@@ -1,0 +1,36 @@
+
+.c12-accreditation-logos {
+    .logo-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 64px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 48px;
+    }
+    p {
+        font-size: 0.875rem;
+        max-width: 100%;
+        width: 515px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 768px) {
+        .logo-list {
+            a {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                    max-width: 177px;
+                    max-height: 114px;
+                }
+            }
+        } 
+        p {
+            text-align: center;
+        }
+    }
+}

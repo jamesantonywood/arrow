@@ -86,28 +86,37 @@ class C12_Elementor_Plugin_Elementor {
 	 * Register all of C12s Custom Widgets
 	 */
     public function register_widgets( $widgets_manager ) {
-        require_once(__DIR__ . '/includes/widgets/page-header.php');
-        $widgets_manager->register( new \C12_Page_Header() );
-
-        require_once(__DIR__ . '/includes/widgets/decorated-video.php');
-        $widgets_manager->register( new \C12_Decorated_Video() );
-
-        require_once(__DIR__ . '/includes/widgets/accreditation-logos.php');
-        $widgets_manager->register( new \C12_Accreditation_Logos() );
-
+        require_once('includes/manifest.php');
+        if (is_array($available_addons)) {
+            foreach ($available_addons as $addon) {
+				if( $addon['enabled'] ) {
+					require_once($addon['include']);
+					$widgets_manager->register(new $addon['classname']());
+					if( array_key_exists('escape_html', $addon) && ! $addon['escape_html'] ) {
+						$slug = (new $addon['classname']())->get_name();
+						add_filter( 'elementor_pro/dynamic_tags/'.$slug.'/should_escape', '__return_false' );
+					}
+				}
+            }
+        }
     }
 
     public function register_controls() {
 
     }
+    
 
-    // TODO: Solution for this
-    // !! This needs to be better - I think it would be best to have a single css file loaded and compiled via sass. 
     // Same Idea with handling scripts I don't like the idea of individually loading everything.
     public function register_styles() {
         // Widget Specific Styles
         wp_register_style( 'c12-widget-styles', plugins_url( '/assets/css/styles.css', __FILE__ ) );
     }
+
+    public function register_scripts() {
+        // Widget Specific Scripts
+        wp_register_script( 'c12-widget-scripts', plugins_url( 'assets/js/app.js', __FILE__ ) );
+    }
+    
 
 }
 

@@ -1,0 +1,175 @@
+
+
+.c12-custom-navigation {
+    // border: 1px solid blue;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2.5em var(--c12-default-padding) 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.5em;
+
+        .site-logo {
+            max-width: 200px;
+            flex-grow: 0;
+            
+            a {
+                transition: scale 0.2s ease;
+                display: block;
+                &:hover {
+                    scale: 1.025;
+                }
+                &:active {
+                    scale: 0.9975;
+                }
+            }
+            
+            img {
+                display: block;
+            }
+        }
+
+        .menu {
+            flex-grow: 1;
+            display: none;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1.333em;
+            ul {
+                display: flex;
+                gap: 1.333em;
+                align-items: baseline;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                li a {
+                    display: block;
+                    color: var(--white);
+                    font-weight: 500;
+                    &:hover, 
+                    &:focus {
+                        color: var(--e-global-color-secondary);
+                    }
+                }
+                .current_page_item a{
+                    color: var(--e-global-color-secondary);
+                }
+            }
+
+            li a, .donate-btn {
+                font-size: 1.111em;
+                line-height: 1;
+                text-transform: lowercase;
+            }
+
+            .donate-btn {
+                display: flex;
+                position: relative;
+                .donate-flag {
+                    position: absolute;
+                    font-family: 'Pacifico', cursive;
+                    color: var(--e-global-color-secondary);
+                    top: 81px;
+                    left: -85px;
+                    svg {
+                        position: absolute;
+                        left: 100%;
+                        bottom: 5px;
+                        path {
+                            fill: var(--e-global-color-secondary);
+                        }
+                    }
+                }
+
+                a {
+                    transition: scale 0.2s ease;
+                    &:hover,
+                    &:focus {
+                        scale: 1.1;
+                    }
+                    &:active {
+                        scale: 0.9;
+                    }
+                }
+            }
+
+            .donate-svg {
+                cursor: pointer;
+                .bg {
+                    path {
+                        fill: var(--e-global-color-d488151);
+                    }
+                }
+                .heart {
+                    fill: var(--e-global-color-843b5cf);
+                }
+            }
+            
+        }
+
+        .hamburger {
+            .hamburger-box {
+                width: 32px;
+            }
+            .hamburger-inner,
+            .hamburger-inner::before,
+            .hamburger-inner::after {
+                    width: 33px;
+                    height: 2px;
+                    background-color: var(--white);
+            }
+        }
+
+        @media screen and (min-width: 876px) {
+            .menu {
+                display: flex;
+            }
+            .hamburger {
+                display: none;
+            }
+        }
+    }
+
+    .sticky-menu {
+        position: fixed;
+        top: -80px;
+        left: 0;
+        right: 0;
+        // display: flex;
+        .menu {
+            justify-content: center;
+            a {
+                display: flex;
+            }
+        }
+        .menu-inner {
+            background: var(--e-global-color-text);
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            padding: 14px 22px 14px 36px;
+            border-radius: 50px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.16);
+
+        }
+
+
+        transition: top 0.3s ease-in-out;
+
+    }
+
+    &.sticky-active {
+        .sticky-menu {
+            top: 16px;
+        }
+    }
+}

@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class C12_Decorated_Video extends \Elementor\Widget_Base {
 
     public function get_name() {
-        return 'decorated_video';
+        return 'c12_decorated_video';
     }
 
     public function get_title() {
@@ -15,7 +15,7 @@ class C12_Decorated_Video extends \Elementor\Widget_Base {
     }
 
     public function get_icon() {
-        return 'eicon-code';
+        return 'eicon-play';
     }
 
     public function get_categories() {

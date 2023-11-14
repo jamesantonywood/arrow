@@ -3,19 +3,4 @@
  * included in this file.
  */
 
-:root {
-    --c12-default-padding: 32px;
-    --white: #fff;
-    --black: #000;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-svg path,
-svg rect,
-svg circle {
-    fill: var(--e-global-color-290b0ef);
-}
 

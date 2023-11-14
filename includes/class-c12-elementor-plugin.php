@@ -176,6 +176,7 @@ class C12_Elementor_Plugin {
 	private function define_elementor_hooks() {
 		$plugin_elementor = new C12_Elementor_Plugin_Elementor($this->get_plugin_name(), $this->get_version());
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_elementor, 'register_styles' );
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_elementor, 'register_scripts' );
 		$this->loader->add_action( 'elementor/elements/categories_registered', $plugin_elementor, 'register_categories' );
 		$this->loader->add_action( 'elementor/widgets/register', $plugin_elementor, 'register_widgets' );
 		$this->loader->add_action( 'elementor/controls/register', $plugin_elementor, 'register_controls' );

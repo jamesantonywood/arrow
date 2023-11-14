@@ -1,7 +1,24 @@
+/*--------------------------
+ * Plugins
+ *--------------------------*/
+@import '../../node_modules/hamburgers/dist/hamburgers.min.css';
+@import '../../node_modules/swiper/swiper-bundle.min.css';
+
+/*--------------------------
+ * Global
+ *--------------------------*/
+@import 'global/keyframes';
+@import 'global/global';
+@import 'global/navigation';
 
 /*--------------------------
  * Widgets
  *--------------------------*/
- 
  @import 'widgets/page-header';
  @import 'widgets/decorated-video';
+ @import 'widgets/simple-text';
+ @import 'widgets/accreditation-logos';
+ @import 'widgets/our-values';
+ @import 'widgets/picture-boxes';
+ @import 'widgets/trustees';
+ @import 'widgets/team-members';
