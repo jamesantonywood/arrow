@@ -30,7 +30,55 @@ class C12_Single_Testimonial extends \Elementor\Widget_Base {
     }
 
     protected function register_controls() {
+        $this->start_controls_section(
+			'content_section',
+			[
+				'label' => esc_html__( 'Content', 'textdomain' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
 
+        $this->add_control(
+			'quote',
+			[
+				'label' => esc_html__( 'Quote', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::TEXTAREA,
+				'rows' => 10,
+				'default' => esc_html__( 'Default Quote', 'textdomain' ),
+				'placeholder' => esc_html__( 'Type your Quote here', 'textdomain' ),
+                'dynamic' => [
+                    'active' => true,
+                ],
+			]
+		);
+
+        $this->add_control(
+			'name',
+			[
+				'label' => esc_html__( 'Name', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'John Doe', 'textdomain' ),
+				'placeholder' => esc_html__( 'Enter name', 'textdomain' ),
+                'dynamic' => [
+                    'active' => true,
+                ],
+			]
+		);
+
+        $this->add_control(
+			'role',
+			[
+				'label' => esc_html__( 'Role', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'Default role', 'textdomain' ),
+				'placeholder' => esc_html__( 'Enter role', 'textdomain' ),
+                'dynamic' => [
+                    'active' => true,
+                ],
+			]
+		);
+
+        $this->end_controls_section();
     } 
 
     protected function render() {
@@ -38,12 +86,12 @@ class C12_Single_Testimonial extends \Elementor\Widget_Base {
         ?>
             <div class="c12-widget c12-single-testimonial">
                <blockquote>
-                    The Arrow project exceeded our expectations, providing in-depth and broad expertise in our areas of interest.
+                    <?= $settings['quote']; ?>
                     <cite class="credit">
                         <div class="image"></div>
                         <div class="content">
-                            <h5>Dylan McKee</h5>
-                            <p>Co-Founder, Nebula Labs</p>
+                            <h5><?= $settings['name']; ?></h5>
+                            <p><?= $settings['role']; ?></p>
                         </div>
                     </cite>
                </blockquote>

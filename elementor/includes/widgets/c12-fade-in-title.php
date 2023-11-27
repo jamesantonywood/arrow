@@ -48,6 +48,9 @@ class C12_Fade_In_Title extends \Elementor\Widget_Base {
             'rows' => 3,
             'default' => esc_html__('The title text goes here', 'c12-elementor-plugin'),
             'placeholder' => esc_html__( 'Type your Title text here', 'c12-elementor-plugin' ),
+            'dynamic' => [
+                'active' => true,
+            ],
           ]  
         );
 

@@ -86,8 +86,25 @@ class C12_Decorated_Video extends \Elementor\Widget_Base {
 		$this->end_controls_section();
     }
 
+    public function getYoutubeEmbedUrl($url)
+    {
+        $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
+        $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
+
+        if (preg_match($longUrlRegex, $url, $matches)) {
+            $youtube_id = $matches[count($matches) - 1];
+        }
+
+        if (preg_match($shortUrlRegex, $url, $matches)) {
+            $youtube_id = $matches[count($matches) - 1];
+        }
+        return 'https://www.youtube.com/embed/' . $youtube_id ;
+    }
+
     protected function render() {
         $settings = $this->get_settings_for_display();
+        // $embedd_code = get_field('content')['embedd_code'];
+        
         ?>
             <div class="c12-decorated-video">
                 <div class="video">
@@ -96,10 +113,14 @@ class C12_Decorated_Video extends \Elementor\Widget_Base {
                             <source src="<?= $settings['video']['url']; ?>">
                         </video>
                     <?php else : ?>
-                        <?= $settings['embedd_code']; ?>
+                        <iframe width="560" height="315" src="<?= $this->getYoutubeEmbedUrl($settings['embedd_code']); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <?php endif; ?>
+                    
                 </div>
             </div>
+            
+
+
         <?php
     }
 

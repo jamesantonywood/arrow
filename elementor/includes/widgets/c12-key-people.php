@@ -35,46 +35,24 @@ class C12_Key_People extends \Elementor\Widget_Base {
 
     protected function render() {
         $settings = $this->get_settings_for_display();
+        $people = get_field('people');
         ?>
             <div class="c12-widget c12-key-people">
-                <!-- foreach Person -->
+                <?php foreach($people as $person) : ?>
                 <div class="person">
                     <div class="credit">
-                        <div class="image"></div>
+                        <div class="image">
+                            <?php if(!empty($person['headshot'])) : ?>
+                                <img src="<?= $person['headshot']['url'] ?>"> 
+                            <?php endif; ?>
+                        </div>
                         <div class="content">
-                            <h5>Dylan McKee</h5>
-                            <p>Co-Founder, Nebula Labs</p>
+                            <h5><?= $person['name']; ?></h5>
+                            <p><?= $person['location_role']; ?></p>
                         </div>
                     </div>
                </div>
-               <!-- endforeach -->
-               <div class="person">
-                    <div class="credit">
-                        <div class="image"></div>
-                        <div class="content">
-                            <h5>Dylan McKee</h5>
-                            <p>Co-Founder, Nebula Labs</p>
-                        </div>
-                    </div>
-               </div>
-               <div class="person">
-                    <div class="credit">
-                        <div class="image"></div>
-                        <div class="content">
-                            <h5>Dylan McKee</h5>
-                            <p>Co-Founder, Nebula Labs</p>
-                        </div>
-                    </div>
-               </div>
-               <div class="person">
-                    <div class="credit">
-                        <div class="image"></div>
-                        <div class="content">
-                            <h5>Dylan McKee</h5>
-                            <p>Co-Founder, Nebula Labs</p>
-                        </div>
-                    </div>
-               </div>
+               <?php endforeach; ?>
             </div>
         <?php
     }
