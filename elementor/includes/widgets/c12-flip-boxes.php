@@ -1,0 +1,482 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+
+class C12_Flip_Boxes extends \Elementor\Widget_Base {
+
+    public function get_name() {
+        return 'c12_flip_boxes';
+    }
+
+    public function get_title() {
+        return esc_html__('Flip Boxes', 'c12-elementor-plugin');
+    }
+
+    public function get_icon() {
+        return 'eicon-star';
+    }
+
+    public function get_categories() {
+        return ['c12-widgets'];
+    }
+
+    public function get_keywords() {
+        return ['flip', 'boxes'];
+    }
+
+    public function get_style_depends() {
+        return ['c12-widget-styles'];
+    }
+
+    protected function register_controls() {
+        
+    }
+
+    protected function render() {
+        $settings = $this->get_settings_for_display();
+        ?>
+            <div class="c12-widget c12-flip-boxes">
+                <!-- for each value... -->
+                <div class="flip-box">
+                    <div class="front">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="91" viewBox="0 0 100 91">
+                                <g id="Group_226" data-name="Group 226" transform="translate(6940.291 -15010.692)">
+                                    <g id="Ellipse_59" data-name="Ellipse 59" transform="translate(-6928.791 15077.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_60" data-name="Ellipse 60" transform="translate(-6909.791 15047.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(-6888.791 15056.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_62" data-name="Ellipse 62" transform="translate(-6864.791 15050.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_63" data-name="Ellipse 63" transform="translate(-6880.791 15035.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_64" data-name="Ellipse 64" transform="translate(-6880.791 15011.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <line id="Line_74" data-name="Line 74" y2="18.04" transform="translate(-6923.463 15048.574)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_77" data-name="Line 77" y2="17" transform="translate(-6894.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_79" data-name="Line 79" y2="17" transform="translate(-6852.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_81" data-name="Line 81" y2="18" transform="translate(-6864.791 15071.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_83" data-name="Line 83" y2="90" transform="translate(-6939.791 15011.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_75" data-name="Line 75" y2="18.04" transform="translate(-6914.443 15057.596) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_76" data-name="Line 76" y2="18.04" transform="translate(-6885.879 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_78" data-name="Line 78" y2="18.04" transform="translate(-6843.785 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_80" data-name="Line 80" y2="18.04" transform="translate(-6855.812 15080.146) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_82" data-name="Line 82" x1="99" transform="translate(-6939.791 15101.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Data Sciences</h3>
+                    </div>
+                    <div class="back">
+                        <p>We expect all of our staff to treat every person with respect, consideration, preserving dignity, privacy and positively respond to their service is provided.</p>
+                    </div>
+                </div>
+                <!-- end for each -->
+
+
+                <div class="flip-box">
+                    <div class="front">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="91" viewBox="0 0 100 91">
+                                <g id="Group_226" data-name="Group 226" transform="translate(6940.291 -15010.692)">
+                                    <g id="Ellipse_59" data-name="Ellipse 59" transform="translate(-6928.791 15077.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_60" data-name="Ellipse 60" transform="translate(-6909.791 15047.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(-6888.791 15056.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_62" data-name="Ellipse 62" transform="translate(-6864.791 15050.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_63" data-name="Ellipse 63" transform="translate(-6880.791 15035.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_64" data-name="Ellipse 64" transform="translate(-6880.791 15011.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <line id="Line_74" data-name="Line 74" y2="18.04" transform="translate(-6923.463 15048.574)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_77" data-name="Line 77" y2="17" transform="translate(-6894.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_79" data-name="Line 79" y2="17" transform="translate(-6852.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_81" data-name="Line 81" y2="18" transform="translate(-6864.791 15071.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_83" data-name="Line 83" y2="90" transform="translate(-6939.791 15011.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_75" data-name="Line 75" y2="18.04" transform="translate(-6914.443 15057.596) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_76" data-name="Line 76" y2="18.04" transform="translate(-6885.879 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_78" data-name="Line 78" y2="18.04" transform="translate(-6843.785 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_80" data-name="Line 80" y2="18.04" transform="translate(-6855.812 15080.146) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_82" data-name="Line 82" x1="99" transform="translate(-6939.791 15101.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Data Sciences</h3>
+                    </div>
+                    <div class="back">
+                        <p>We expect all of our staff to treat every person with respect, consideration, preserving dignity, privacy and positively respond to their service is provided.</p>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="front">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="91" viewBox="0 0 100 91">
+                                <g id="Group_226" data-name="Group 226" transform="translate(6940.291 -15010.692)">
+                                    <g id="Ellipse_59" data-name="Ellipse 59" transform="translate(-6928.791 15077.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_60" data-name="Ellipse 60" transform="translate(-6909.791 15047.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(-6888.791 15056.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_62" data-name="Ellipse 62" transform="translate(-6864.791 15050.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_63" data-name="Ellipse 63" transform="translate(-6880.791 15035.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_64" data-name="Ellipse 64" transform="translate(-6880.791 15011.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <line id="Line_74" data-name="Line 74" y2="18.04" transform="translate(-6923.463 15048.574)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_77" data-name="Line 77" y2="17" transform="translate(-6894.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_79" data-name="Line 79" y2="17" transform="translate(-6852.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_81" data-name="Line 81" y2="18" transform="translate(-6864.791 15071.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_83" data-name="Line 83" y2="90" transform="translate(-6939.791 15011.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_75" data-name="Line 75" y2="18.04" transform="translate(-6914.443 15057.596) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_76" data-name="Line 76" y2="18.04" transform="translate(-6885.879 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_78" data-name="Line 78" y2="18.04" transform="translate(-6843.785 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_80" data-name="Line 80" y2="18.04" transform="translate(-6855.812 15080.146) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_82" data-name="Line 82" x1="99" transform="translate(-6939.791 15101.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Data Sciences</h3>
+                    </div>
+                    <div class="back">
+                        <p>We expect all of our staff to treat every person with respect, consideration, preserving dignity, privacy and positively respond to their service is provided.</p>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="front">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="91" viewBox="0 0 100 91">
+                                <g id="Group_226" data-name="Group 226" transform="translate(6940.291 -15010.692)">
+                                    <g id="Ellipse_59" data-name="Ellipse 59" transform="translate(-6928.791 15077.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_60" data-name="Ellipse 60" transform="translate(-6909.791 15047.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(-6888.791 15056.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_62" data-name="Ellipse 62" transform="translate(-6864.791 15050.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_63" data-name="Ellipse 63" transform="translate(-6880.791 15035.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_64" data-name="Ellipse 64" transform="translate(-6880.791 15011.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <line id="Line_74" data-name="Line 74" y2="18.04" transform="translate(-6923.463 15048.574)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_77" data-name="Line 77" y2="17" transform="translate(-6894.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_79" data-name="Line 79" y2="17" transform="translate(-6852.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_81" data-name="Line 81" y2="18" transform="translate(-6864.791 15071.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_83" data-name="Line 83" y2="90" transform="translate(-6939.791 15011.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_75" data-name="Line 75" y2="18.04" transform="translate(-6914.443 15057.596) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_76" data-name="Line 76" y2="18.04" transform="translate(-6885.879 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_78" data-name="Line 78" y2="18.04" transform="translate(-6843.785 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_80" data-name="Line 80" y2="18.04" transform="translate(-6855.812 15080.146) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_82" data-name="Line 82" x1="99" transform="translate(-6939.791 15101.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Data Sciences</h3>
+                    </div>
+                    <div class="back">
+                        <p>We expect all of our staff to treat every person with respect, consideration, preserving dignity, privacy and positively respond to their service is provided.</p>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="front">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="91" viewBox="0 0 100 91">
+                                <g id="Group_226" data-name="Group 226" transform="translate(6940.291 -15010.692)">
+                                    <g id="Ellipse_59" data-name="Ellipse 59" transform="translate(-6928.791 15077.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_60" data-name="Ellipse 60" transform="translate(-6909.791 15047.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(-6888.791 15056.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_62" data-name="Ellipse 62" transform="translate(-6864.791 15050.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_63" data-name="Ellipse 63" transform="translate(-6880.791 15035.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_64" data-name="Ellipse 64" transform="translate(-6880.791 15011.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <line id="Line_74" data-name="Line 74" y2="18.04" transform="translate(-6923.463 15048.574)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_77" data-name="Line 77" y2="17" transform="translate(-6894.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_79" data-name="Line 79" y2="17" transform="translate(-6852.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_81" data-name="Line 81" y2="18" transform="translate(-6864.791 15071.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_83" data-name="Line 83" y2="90" transform="translate(-6939.791 15011.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_75" data-name="Line 75" y2="18.04" transform="translate(-6914.443 15057.596) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_76" data-name="Line 76" y2="18.04" transform="translate(-6885.879 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_78" data-name="Line 78" y2="18.04" transform="translate(-6843.785 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_80" data-name="Line 80" y2="18.04" transform="translate(-6855.812 15080.146) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_82" data-name="Line 82" x1="99" transform="translate(-6939.791 15101.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Data Sciences</h3>
+                    </div>
+                    <div class="back">
+                        <p>We expect all of our staff to treat every person with respect, consideration, preserving dignity, privacy and positively respond to their service is provided.</p>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="front">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="91" viewBox="0 0 100 91">
+                                <g id="Group_226" data-name="Group 226" transform="translate(6940.291 -15010.692)">
+                                    <g id="Ellipse_59" data-name="Ellipse 59" transform="translate(-6928.791 15077.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_60" data-name="Ellipse 60" transform="translate(-6909.791 15047.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(-6888.791 15056.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_62" data-name="Ellipse 62" transform="translate(-6864.791 15050.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_63" data-name="Ellipse 63" transform="translate(-6880.791 15035.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_64" data-name="Ellipse 64" transform="translate(-6880.791 15011.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <line id="Line_74" data-name="Line 74" y2="18.04" transform="translate(-6923.463 15048.574)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_77" data-name="Line 77" y2="17" transform="translate(-6894.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_79" data-name="Line 79" y2="17" transform="translate(-6852.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_81" data-name="Line 81" y2="18" transform="translate(-6864.791 15071.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_83" data-name="Line 83" y2="90" transform="translate(-6939.791 15011.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_75" data-name="Line 75" y2="18.04" transform="translate(-6914.443 15057.596) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_76" data-name="Line 76" y2="18.04" transform="translate(-6885.879 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_78" data-name="Line 78" y2="18.04" transform="translate(-6843.785 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_80" data-name="Line 80" y2="18.04" transform="translate(-6855.812 15080.146) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_82" data-name="Line 82" x1="99" transform="translate(-6939.791 15101.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Data Sciences</h3>
+                    </div>
+                    <div class="back">
+                        <p>We expect all of our staff to treat every person with respect, consideration, preserving dignity, privacy and positively respond to their service is provided.</p>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="front">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="91" viewBox="0 0 100 91">
+                                <g id="Group_226" data-name="Group 226" transform="translate(6940.291 -15010.692)">
+                                    <g id="Ellipse_59" data-name="Ellipse 59" transform="translate(-6928.791 15077.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_60" data-name="Ellipse 60" transform="translate(-6909.791 15047.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(-6888.791 15056.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_62" data-name="Ellipse 62" transform="translate(-6864.791 15050.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_63" data-name="Ellipse 63" transform="translate(-6880.791 15035.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_64" data-name="Ellipse 64" transform="translate(-6880.791 15011.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <line id="Line_74" data-name="Line 74" y2="18.04" transform="translate(-6923.463 15048.574)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_77" data-name="Line 77" y2="17" transform="translate(-6894.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_79" data-name="Line 79" y2="17" transform="translate(-6852.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_81" data-name="Line 81" y2="18" transform="translate(-6864.791 15071.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_83" data-name="Line 83" y2="90" transform="translate(-6939.791 15011.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_75" data-name="Line 75" y2="18.04" transform="translate(-6914.443 15057.596) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_76" data-name="Line 76" y2="18.04" transform="translate(-6885.879 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_78" data-name="Line 78" y2="18.04" transform="translate(-6843.785 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_80" data-name="Line 80" y2="18.04" transform="translate(-6855.812 15080.146) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_82" data-name="Line 82" x1="99" transform="translate(-6939.791 15101.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Data Sciences</h3>
+                    </div>
+                    <div class="back">
+                        <p>We expect all of our staff to treat every person with respect, consideration, preserving dignity, privacy and positively respond to their service is provided.</p>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="front">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="91" viewBox="0 0 100 91">
+                                <g id="Group_226" data-name="Group 226" transform="translate(6940.291 -15010.692)">
+                                    <g id="Ellipse_59" data-name="Ellipse 59" transform="translate(-6928.791 15077.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_60" data-name="Ellipse 60" transform="translate(-6909.791 15047.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(-6888.791 15056.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_62" data-name="Ellipse 62" transform="translate(-6864.791 15050.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_63" data-name="Ellipse 63" transform="translate(-6880.791 15035.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_64" data-name="Ellipse 64" transform="translate(-6880.791 15011.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <line id="Line_74" data-name="Line 74" y2="18.04" transform="translate(-6923.463 15048.574)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_77" data-name="Line 77" y2="17" transform="translate(-6894.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_79" data-name="Line 79" y2="17" transform="translate(-6852.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_81" data-name="Line 81" y2="18" transform="translate(-6864.791 15071.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_83" data-name="Line 83" y2="90" transform="translate(-6939.791 15011.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_75" data-name="Line 75" y2="18.04" transform="translate(-6914.443 15057.596) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_76" data-name="Line 76" y2="18.04" transform="translate(-6885.879 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_78" data-name="Line 78" y2="18.04" transform="translate(-6843.785 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_80" data-name="Line 80" y2="18.04" transform="translate(-6855.812 15080.146) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_82" data-name="Line 82" x1="99" transform="translate(-6939.791 15101.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Data Sciences</h3>
+                    </div>
+                    <div class="back">
+                        <p>We expect all of our staff to treat every person with respect, consideration, preserving dignity, privacy and positively respond to their service is provided.</p>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="front">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="91" viewBox="0 0 100 91">
+                                <g id="Group_226" data-name="Group 226" transform="translate(6940.291 -15010.692)">
+                                    <g id="Ellipse_59" data-name="Ellipse 59" transform="translate(-6928.791 15077.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_60" data-name="Ellipse 60" transform="translate(-6909.791 15047.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(-6888.791 15056.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_62" data-name="Ellipse 62" transform="translate(-6864.791 15050.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+                                    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_63" data-name="Ellipse 63" transform="translate(-6880.791 15035.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <g id="Ellipse_64" data-name="Ellipse 64" transform="translate(-6880.791 15011.192)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1">
+                                    <ellipse cx="8" cy="7.5" rx="8" ry="7.5" stroke="none"/>
+                                    <ellipse cx="8" cy="7.5" rx="7.5" ry="7" fill="none"/>
+                                    </g>
+                                    <line id="Line_74" data-name="Line 74" y2="18.04" transform="translate(-6923.463 15048.574)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_77" data-name="Line 77" y2="17" transform="translate(-6894.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_79" data-name="Line 79" y2="17" transform="translate(-6852.791 15026.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_81" data-name="Line 81" y2="18" transform="translate(-6864.791 15071.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_83" data-name="Line 83" y2="90" transform="translate(-6939.791 15011.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_75" data-name="Line 75" y2="18.04" transform="translate(-6914.443 15057.596) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_76" data-name="Line 76" y2="18.04" transform="translate(-6885.879 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_78" data-name="Line 78" y2="18.04" transform="translate(-6843.785 15035.045) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_80" data-name="Line 80" y2="18.04" transform="translate(-6855.812 15080.146) rotate(90)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                    <line id="Line_82" data-name="Line 82" x1="99" transform="translate(-6939.791 15101.192)" fill="none" stroke="#0e1111" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Data Sciences</h3>
+                    </div>
+                    <div class="back">
+                        <p>We expect all of our staff to treat every person with respect, consideration, preserving dignity, privacy and positively respond to their service is provided.</p>
+                    </div>
+                </div>
+              
+            </div>
+        <?php
+    }
+
+}

@@ -32,38 +32,8 @@ $available_addons = [
         'enabled'  =>  true
     ],
     [
-        'classname' => '\C12_Our_Values',
-        'include' => __DIR__ . '/widgets/c12-our-values.php',
-        'version'   => '1.0.0',
-        'enabled'  =>  true
-    ],
-    [
-        'classname' => '\C12_Picture_Boxes',
-        'include' => __DIR__ . '/widgets/c12-picture-boxes.php',
-        'version'   => '1.0.0',
-        'enabled'  =>  true
-    ],
-    [
         'classname' => '\C12_Stats',
         'include' => __DIR__ . '/widgets/c12-stats.php',
-        'version'   => '1.0.0',
-        'enabled'  =>  true
-    ],
-    [
-        'classname' => '\C12_Team_Members',
-        'include' => __DIR__ . '/widgets/c12-team-members.php',
-        'version'   => '1.0.0',
-        'enabled'  =>  true
-    ],
-    [
-        'classname' => '\C12_Trustees',
-        'include' => __DIR__ . '/widgets/c12-trustees.php',
-        'version'   => '1.0.0',
-        'enabled'  =>  true
-    ],
-    [
-        'classname' => '\C12_Marquee',
-        'include' => __DIR__ . '/widgets/c12-marquee.php',
         'version'   => '1.0.0',
         'enabled'  =>  true
     ],
@@ -80,14 +50,110 @@ $available_addons = [
         'enabled'  =>  true
     ],
     [
-        'classname' => '\C12_Homecare_Testimonials',
-        'include' => __DIR__ . '/widgets/c12-homecare-testimonials.php',
+        'classname' => '\C12_Fade_In_Title',
+        'include' => __DIR__ . '/widgets/c12-fade-in-title.php',
         'version'   => '1.0.0',
         'enabled'  =>  true
     ],
     [
-        'classname' => '\C12_Vacancy_List',
-        'include' => __DIR__ . '/widgets/c12-vacancy-list.php',
+        'classname' => '\C12_Button_Group',
+        'include' => __DIR__ . '/widgets/c12-button-group.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Gradient',
+        'include' => __DIR__ . '/widgets/c12-gradient.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Key_Benefits',
+        'include' => __DIR__ . '/widgets/c12-key-benefits.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Testimonials',
+        'include' => __DIR__ . '/widgets/c12-testimonials.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Half_Width',
+        'include' => __DIR__ . '/widgets/c12-half-width.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Custom_Footer',
+        'include' => __DIR__ . '/widgets/c12-custom-footer.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Case_Study_Header',
+        'include' => __DIR__ . '/widgets/c12-case-study-header.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Single_Testimonial',
+        'include' => __DIR__ . '/widgets/c12-single-testimonial.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Key_People',
+        'include' => __DIR__ . '/widgets/c12-key-people.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Case_Studies',
+        'include' => __DIR__ . '/widgets/c12-case-studies.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Case_Study_Filter',
+        'include' => __DIR__ . '/widgets/c12-case-study-filter.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Simple_Page_Header',
+        'include' => __DIR__ . '/widgets/c12-simple-page-header.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Post_Header',
+        'include' => __DIR__ . '/widgets/c12-post-header.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Flip_Boxes',
+        'include' => __DIR__ . '/widgets/c12-flip-boxes.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Steps',
+        'include' => __DIR__ . '/widgets/c12-steps.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_University_Graphic',
+        'include' => __DIR__ . '/widgets/c12-university-graphic.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
+    [
+        'classname' => '\C12_Archive_Filter',
+        'include' => __DIR__ . '/widgets/c12-archive-filter.php',
         'version'   => '1.0.0',
         'enabled'  =>  true
     ],

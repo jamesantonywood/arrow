@@ -1,0 +1,114 @@
+
+
+.c12-custom-footer {
+    display: flex;
+    padding: 154px 72px 72px 36px;
+    height: 100vh;
+    min-height: 584px;
+    max-height: 800px;
+    // overflow: hidden;
+    max-width: 1208px;
+    margin: 0 auto;
+    .site-logo {
+        flex: 0 25%;
+        border-right: 1px solid rgba(255,255,255,0.1);
+        padding-right: 72px;
+        position: relative;
+        .arrow-container {
+            right: 18px;
+            bottom: -180px;
+            .arrow-arm {
+                transform-origin: 48.4% 13.28%;
+                rotate: 74deg;
+                background-color: var(--e-global-color-4507a68);
+            }
+            .top-arm {
+                rotate: 17deg;
+                background: var(--blue-gradient);
+            }
+        }
+    }
+
+    .footer-navigation {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 50px;
+        h4 {
+            font-size: 1em;
+            color: var(--white);
+            margin-bottom: 48px;
+        }
+        .menu {
+            padding: 0;
+            list-style-type: none;
+            li a {
+                color: rgba(255,255,255,0.6);
+                transition: color 0.125s ease-in-out;
+                &:hover {
+                    color: var(--white);
+                }
+            }
+        }
+        .main {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            li {
+                margin-bottom: 1em;
+            }
+        }
+        .secondary {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            a {
+                font-size: 0.875em;
+            }
+            .copyright {
+                color: rgba(255,255,255,0.6);
+                font-size: 0.875em;
+            }
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        flex-direction: column;
+        max-height: unset;
+        height: auto;
+        padding: 154px 36px 72px 36px;
+        .site-logo {
+            border: none;
+            margin-bottom: 30px;
+            img {
+                max-width: 200px;
+            }
+            .arrow-container {
+                display: none;
+            }
+        }
+        .footer-navigation {
+            padding: 0;
+            .main {
+                h4 {
+                    margin-top: 30px;
+                    margin-bottom: 25px;
+                }
+                flex-direction: column;
+            }
+            .secondary {
+                border-top: 1px solid rgba(255,255,255,0.1);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding-top: 32px;
+                margin-top: 16px;
+                nav {
+                    margin-bottom: 72px;
+                }
+            }
+        }
+    }
+
+} 

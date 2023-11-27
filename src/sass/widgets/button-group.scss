@@ -1,0 +1,29 @@
+
+.c12-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    }
+}
+
+.cta {
+    a {
+        cursor: pointer;
+        color: var(--e-global-color-text);
+        background-color: var(--e-global-color-primary);
+        border: 1px solid var(--e-global-color-primary);
+        padding: 0.5em 1.25em;
+        border-radius: 1em 3em 3em 1em;
+        display: inline-block;
+        text-wrap: nowrap;
+    }
+    &.secondary {
+        a {
+            color: var(--e-global-color-primary);
+            background-color: unset;
+        }
+    }
+}

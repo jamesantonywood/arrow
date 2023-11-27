@@ -37,8 +37,26 @@ class C12_Stats extends \Elementor\Widget_Base {
     protected function render() {
         $settings = $this->get_settings_for_display();
         ?>
-            <div class="c12-stats">
-                <p>I will be the Stats Widget!</p>
+            <div class="c12-widget c12-stats">
+                
+                <div class="stat">
+                    <div class="number" data-color="blue">
+                        <!-- Javascript span-ify and replace with images - unsure weather to store these as plugin assets... might be for the best rather than clogging media library... -->
+                        <img src="<?= plugins_url('../../assets/img/arr_1_blue.png', __FILE__); ?>">
+                        <img src="<?= plugins_url('../../assets/img/arr_4_blue.png', __FILE__); ?>">
+                        <img src="<?= plugins_url('../../assets/img/arr_3_blue.png', __FILE__); ?>">
+                    </div>
+                    <div class="text">
+                        <span>New jobs created</span>
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
         <?php
     }

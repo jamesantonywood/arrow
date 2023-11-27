@@ -1,0 +1,72 @@
+
+
+.c12-case-study-header {
+    margin-bottom: 120px;
+    .inner {
+        width: 100%;
+        height: 100%;
+        max-width: 1020px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 192px 36px 50px;
+        gap: 32px;
+        .content, .image {
+            flex: 0 1 444px;
+        }
+        .content {
+            h1 {
+                margin: 0;
+            }
+            .subline {
+                font-size: 2em;
+                font-weight: 700;
+                line-height: 1.1;
+            }
+            .meta {
+                margin-top: 24px;
+                p, a {
+                    margin: 0;
+                    color: #8e8e8e;
+                }
+                a {
+                    padding-right: 20px;
+                    position: relative;
+                    svg {
+                        width: 13px;
+                        height: 11px;
+
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+                
+            }
+        }
+        .image {
+            flex: 0 1 430px;
+            aspect-ratio: 1/1;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+            }
+        }
+    }
+
+    @media screen and (max-width: 872px) {
+        .image {
+            display: none;
+        }
+    }
+}
+

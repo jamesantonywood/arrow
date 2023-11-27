@@ -1,0 +1,20 @@
+.c12-fade-in-title {
+    h2 {
+        font-size: min(max(1.75em, 8vw), 3.5em) !important;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 768px) {
+        text-align: center;
+        &.left {
+            text-align: left;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        @for $i from 0 through 20 {
+            h2[data-break="#{$i}"] .word[style*="--word-index: #{$i};"] + .whitespace {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+
+.c12-page-hero {
+    // TODO REMOVE FOR ANIMATION...
+    overflow: hidden;
+    .content {
+        max-width: 738px;
+        h1 {
+            span {
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: 400;
+                display: block;
+            }
+        }
+        p {
+            max-width: unset;
+            font-size: 1rem;
+            margin: 0 0 24px;
+            // text-wrap: balance;
+        }
+        
+    }
+     @media screen and (max-width: 768px) {
+        // TODO dont scale height on mobile
+        min-height: unset;
+        // height: unset;
+        aspect-ratio: 9/16;
+        .content {
+            max-width: 30em;
+            .jumbotron {
+                max-width: 9em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    }
+}

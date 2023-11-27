@@ -1,8 +1,9 @@
 /*--------------------------
  * Plugins
  *--------------------------*/
-@import '../../node_modules/hamburgers/dist/hamburgers.min.css';
-@import '../../node_modules/swiper/swiper-bundle.min.css';
+ @import '../../node_modules/splitting/dist/splitting.css';
+ @import '../../node_modules/splitting/dist/splitting-cells.css';
+//  @import '../../node_modules/swiper/swiper-bundle.min.css';
 
 /*--------------------------
  * Global
@@ -10,15 +11,33 @@
 @import 'global/keyframes';
 @import 'global/global';
 @import 'global/navigation';
+@import 'global/footer';
+@import 'global/generics';
 
 /*--------------------------
  * Widgets
  *--------------------------*/
- @import 'widgets/page-header';
- @import 'widgets/decorated-video';
- @import 'widgets/simple-text';
- @import 'widgets/accreditation-logos';
- @import 'widgets/our-values';
- @import 'widgets/picture-boxes';
- @import 'widgets/trustees';
- @import 'widgets/team-members';
+@import 'widgets/home-hero';
+@import 'widgets/page-hero';
+@import 'widgets/arrow-graphic';
+@import 'widgets/fade-in-title';
+@import 'widgets/decorated-video';
+@import 'widgets/accreditation-logos';
+@import 'widgets/simple-text';
+@import 'widgets/button-group';
+@import 'widgets/gradient';
+@import 'widgets/key-benefits';
+@import 'widgets/testimonials';
+@import 'widgets/stats';
+@import 'widgets/half-width';
+@import 'widgets/case-study-header';
+@import 'widgets/single-testimonial';
+@import 'widgets/key-people';
+@import 'widgets/university-graphic';
+@import 'widgets/steps';
+@import 'widgets/case-studies';
+
+@import 'widgets/simple-page-header';
+
+
+@import 'widgets/flip-boxes';

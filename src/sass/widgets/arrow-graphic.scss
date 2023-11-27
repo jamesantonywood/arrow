@@ -1,0 +1,111 @@
+
+
+// TODO Widget-ify!...
+// TODO 
+.arrow-container {
+    // border: 1px solid blue;
+    position: absolute;
+    min-width: 468px;
+    width: calc(100svh - 190px);
+    // height: 648px;
+    max-width: 628px;
+    aspect-ratio: 1/1 !important;
+    bottom: 0;
+    right: 96px;
+    z-index: 0;
+    .arrow-arm {
+        // border: 1px solid red;
+        width: 27%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        background: var(--e-global-color-bc2e963);
+        transform-origin: 50% 13.58%;
+        border-radius: 100px 100px 40px 40px;
+        rotate: 45deg;
+        &.top-arm {
+            z-index: 2;
+            rotate: 3deg;
+            background: var(--green-gradient);
+        }
+    }
+
+
+    // TODO FIGURE THIS BIT OUT
+    @media screen and (max-width: 925px) {
+        right: 0 !important;
+    }
+    @media screen and (max-width: 768px) {
+        min-width: unset !important;
+        width: 95% !important;
+        left: 50% !important;
+        right: unset !important;
+        bottom: unset !important;
+        transform: translateX(-50%) !important;
+        top: 100px !important;
+    }
+}
+
+
+.arrow-container {
+    // Colours
+    &[data-color="green"] {
+        .arrow-arm {
+            background: var(--e-global-color-bc2e963);
+            &.top-arm {
+                background: var(--green-gradient);
+            }
+        }
+    }
+    &[data-color="blue"] {
+        .arrow-arm {
+            background: var(--e-global-color-4507a68);
+            &.top-arm {
+                background: var(--blue-gradient);
+            }
+        }
+    }
+    &[data-color="red"] {
+        .arrow-arm {
+            background: var(--e-global-color-670b45c);
+            &.top-arm {
+                background: var(--red-gradient);
+            }
+        }
+    }
+    &[data-color="yellow"] {
+        .arrow-arm {
+            background: var(--e-global-color-2ee2a9c);
+            &.top-arm {
+                background: var(--yellow-gradient);
+            }
+        }
+    }
+    &[data-color="purple"] {
+        .arrow-arm {
+            background: var(--e-global-color-a5ade05);
+            &.top-arm {
+                background: var(--purple-gradient);
+            }
+        }
+    }
+}
+
+.c12-page-hero {
+    .arrow-container {
+        top: unset;
+        right: unset;
+        bottom: unset;
+        left: unset;
+        .arrow-arm {
+            border-radius: 150px 150px 60px 60px; //
+        }
+
+        @media screen and (min-width: 800px) {
+            width: 100svh;
+        }
+    }
+}

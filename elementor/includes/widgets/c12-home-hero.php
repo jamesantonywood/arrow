@@ -37,8 +37,20 @@ class C12_Home_Hero extends \Elementor\Widget_Base {
     protected function render() {
         $settings = $this->get_settings_for_display();
         ?>
-            <div class="c12-home-hero">
-                <p>I will be the Home Hero Widget!</p>
+            <div class="c12-widget c12-home-hero c12-hero">
+                <div class="inner">
+                    <div class="content">
+                        <h1 class="jumbotron">Supercharge Your Business</h1>
+                        <p>Growing a business brings a variety of challenges, but you don’t have to do it all alone.</p>
+                        <div class="cta">
+                            <a href="#"><span>Ready to grow?</span></a>
+                        </div>
+                    </div>
+                    <div class="arrow-container">
+                        <div class="arrow-arm"></div>
+                        <div class="arrow-arm top-arm"></div>
+                    </div>
+                </div>
             </div>
         <?php
     }

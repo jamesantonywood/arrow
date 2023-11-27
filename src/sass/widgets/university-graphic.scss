@@ -1,0 +1,76 @@
+.c12-university-graphic {
+
+    .inner {
+        display: flex;
+        z-index: 0;
+        .image,
+        .slides {
+            flex: 0 50%;
+        }
+        .image {
+            position: relative;
+            svg {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .slides {
+            border: 1px solid var(--e-global-color-a70a27c);
+            border-radius: 10px;
+            margin: 75px 0;
+            position: relative;
+            .slide-navigation {
+                position: absolute; 
+                bottom: 24px;
+                left: 45px;
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                z-index: 2;
+                .pagination {
+                    margin: 0;
+                    display: inline-block;
+                    width: 100px;
+                    text-align: center;
+                    font-size: 0.75em;
+
+                }
+                .prev,
+                .next {
+                    position: relative;
+                    transition: transform 0.15s ease-in-out;
+                    cursor: pointer;
+                    svg {
+                        display: block;
+                        line {
+                            stroke: var(--e-global-color-a70a27c);
+                            transition: stroke 0.3s ease;
+                        }
+                    }
+                    &.swiper-button-disabled {
+                        svg line {
+                            stroke: var(--e-global-color-secondary);
+                        }
+                    }
+                }
+                .prev:hover {
+                    transform: translateX(-5px);
+                }
+                .next:hover {
+                    transform: translateX(5px);
+                }
+            }
+            .slide {
+                padding: 37px 48px 67px;
+                h3 {
+                    font-size: 1.5em;
+                }
+            }
+        }
+       
+        
+    }
+}

@@ -1,23 +1,30 @@
 
+
 .c12-simple-text {
+    
+
     max-width: 100%;
-    width: 580px;
-    margin: 0 auto;
+    // width: unset;
+    margin: 48px auto;
 
-    h2 {
-        color: var(--e-global-color-secondary);
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-
-    p {
+    h3 {
         font-size: 1.25rem;
-        font-weight: 500;
+        margin-bottom: 24px;
+        font-weight: 700;
     }
+    
 
     @media screen and (min-width: 768px) {
         text-align: center;
+        &.left {
+            text-align: left;
+        }
+        p {
+            padding: 0 16px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: unset !important;
     }
 }
-

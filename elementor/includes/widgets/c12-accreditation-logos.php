@@ -32,7 +32,53 @@ class C12_Accreditation_Logos extends \Elementor\Widget_Base {
     // }
 
     protected function register_controls() {
-        
+        $this->start_controls_section(
+			'content_section',
+			[
+				'label' => esc_html__( 'Content', 'c12-elementor-plugin' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+        $this->add_control(
+			'logos',
+			[
+				'label' => esc_html__( 'Logos', 'c12-elementor-plugin' ),
+				'type' => \Elementor\Controls_Manager::REPEATER,
+				'fields' => [
+					[
+						'name' => 'logo_img',
+						'label' => esc_html__( 'Choose Logo', 'c12-elementor-plugin' ),
+						'type' => \Elementor\Controls_Manager::MEDIA,
+						'default' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+						'label_block' => true,
+					],
+					[
+						'name' => 'logo_url',
+						'label' => esc_html__( 'Logo URL', 'c12-elementor-plugin' ),
+						'type' => \Elementor\Controls_Manager::URL,
+						'options' => [ 'url', 'is_external', 'nofollow' ],
+                        'default' => [
+                            'url' => '#',
+                            'is_external' => false,
+                            'nofollow' => false,
+                            // 'custom_attributes' => '',
+                        ],
+						'label_block' => true,
+					],
+                    
+				],
+				'default' => [
+					
+				],
+                
+			]
+		);
+       
+
+        $this->end_controls_section();
     }
 
     protected function render() {
@@ -42,22 +88,17 @@ class C12_Accreditation_Logos extends \Elementor\Widget_Base {
 
                 <div class="logo-list">
                     <!-- for each logo... -->
-                    <a href="#">
-                        <img src="/wp-content/uploads/2023/11/chas.png" alt="">
-                    </a>
-                    <!-- end foreach -->
-                    <a href="#">
-                        <img src="/wp-content/uploads/2023/11/cta.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="/wp-content/uploads/2023/11/qcc.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="/wp-content/uploads/2023/11/homecare-association.png" alt="">
-                    </a>
-                </div>
 
-                <p>Supportive is fully accredited by the UK’s leading authorities in Homecare and Transport ensuring that we are committed to and deliver the best quality service.</p>
+                    <?php if($settings['logos']) : ?>
+                        <?php foreach($settings['logos'] as $logo) : ?>
+                            <?= $logo['logo_url']['url'] ? '<a class="logo" href="'. $logo['logo_url']['url'] .'">' : '<div class="logo">' ?>
+                                <img src="<?= $logo['logo_img']['url'] ?>" alt="">
+                            <?= $logo['logo_url']['url'] ? '</a>' : '</div>'; ?>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                    
+                    <!-- end foreach -->
+                </div>
             
             </div>
         <?php

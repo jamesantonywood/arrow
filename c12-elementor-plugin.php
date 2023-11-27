@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       c12-elementor-plugin
  * Plugin URI:        https://curious12.com
- * Description:       This is a description of the plugin.
+ * Description:       This is the c12-plugin for Arrow
  * Version:           1.0.0
  * Author:            Curious12
  * Author URI:        https://curious12.com/

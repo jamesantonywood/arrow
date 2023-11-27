@@ -1,0 +1,17 @@
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 40px;
+    .cat {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 0.625em;
+        padding: 12px 10px 10px 7px;
+        line-height: 0;
+        background: var(--e-global-color-primary);
+        color: var(--e-global-color-6d34e3e);
+        border-radius: 5px 10px 10px 5px;
+        text-transform: uppercase;
+    }
+}

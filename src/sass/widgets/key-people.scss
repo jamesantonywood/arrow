@@ -1,0 +1,35 @@
+
+
+.c12-key-people {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    .person {
+        background-color: var(--e-global-color-secondary);
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        .credit {
+            padding: 0;
+            .image {
+                width: 72px;
+                height: 72px;
+            }
+            h5 {
+                color: var(--e-global-color-text);
+                margin-bottom: 10px;
+                font-size: 1.25em;
+            }
+            p {
+                font-size: 0.75em;
+                line-height: 1;
+            }
+
+        }
+    }
+    @media screen and (min-width: 768px) {
+        margin-right: -76px;
+    }
+}

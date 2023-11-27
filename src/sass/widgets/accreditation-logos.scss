@@ -7,30 +7,37 @@
         gap: 64px;
         justify-content: center;
         align-items: center;
-        margin-bottom: 48px;
-    }
-    p {
-        font-size: 0.875rem;
-        max-width: 100%;
-        width: 515px;
-        margin: 0 auto;
-    }
+        margin: 64px 0;
+        .logo {
+            text-align: center;
+            flex: 0 30%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+                max-width: 228px;
+                max-height: 107px;
 
-    @media screen and (min-width: 768px) {
+            }
+        }
+    }
+    // p {
+    //     font-size: 0.875rem;
+    //     max-width: 100%;
+    //     width: 515px;
+    //     margin: 0 auto;
+    // }
+
+    @media screen and (min-width: 960px) {
         .logo-list {
-            a {
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    object-position: center;
-                    max-width: 177px;
-                    max-height: 114px;
-                }
+            .logo {
+                display: inline-block;
+                flex: 1 18%;
             }
         } 
-        p {
-            text-align: center;
-        }
+        // p {
+        //     text-align: center;
+        // }
     }
 }
