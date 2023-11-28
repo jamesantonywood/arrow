@@ -35,7 +35,7 @@ class C12_Custom_Navigation extends \Elementor\Widget_Base {
     }
 
     protected function register_controls() {
-        
+
     }
 
     protected function render() {
@@ -65,7 +65,7 @@ class C12_Custom_Navigation extends \Elementor\Widget_Base {
                     <?= get_custom_logo(); ?>
                 </div>
                 <div class="cta">
-                    <a href="#"><span>Ready to grow?</span></a>
+                    <a href="#"><span>Ready to innovate?</span></a>
                 </div>
             </div>
 
