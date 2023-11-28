@@ -19,14 +19,14 @@
         border-radius: 1em 3em 3em 1em;
         display: inline-block;
         text-wrap: nowrap;
-
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
         pointer-events: auto;
         // background: #e7e7e7;
         border: none;
         margin: 0;
         position: relative;
         display: inline-block;
-
+        z-index: 0;
         overflow: hidden;
         transition: color 0.3s ease-in-out;
 
