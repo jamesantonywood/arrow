@@ -57,7 +57,25 @@ class C12_Custom_Footer extends \Elementor\Widget_Base {
                             <?= wp_nav_menu(array('menu' => 'footer-menu-2')); ?></nav>
                         <nav>
                             <h4>News</h4>
-                            <?= wp_nav_menu(array('menu' => 'footer-menu-3')); ?></nav>
+                            
+                            <?php $news_posts = get_posts([
+                                'post_type' => 'post',
+                                'posts_per_page' => 3,
+                                'orderby' => 'ID',
+                                'order' => 'ASC'
+                            ]); ?>
+                            <?php if ($news_posts) : ?>
+                            <div class="posts">
+                                <?php foreach($news_posts as $post) : ?>
+                                    <div class="post">
+                                        <p><?= get_the_date('j F Y', $post->ID); ?></p>
+                                        <h5><?= get_the_title($post->ID); ?></h5>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <?php endif; ?>
+
+
                     </div>
                     <div class="secondary">
                         <nav><?= wp_nav_menu(array('menu' => 'footer-secondary-menu')); ?></nav>

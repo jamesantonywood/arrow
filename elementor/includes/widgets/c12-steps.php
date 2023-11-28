@@ -48,10 +48,10 @@ class C12_Steps extends \Elementor\Widget_Base {
                                 <p>Let’s talk about what’s happening and what you’d like to achieve.</p>
                                 <div class="buttons">
                                     <div class="cta">
-                                        <a href="#"><span>Ready to grow?</span></a>
+                                        <a href="/apply"><span>Ready to innovate?</span></a>
                                     </div>
                                     <div class="cta secondary">
-                                        <a href="#"><span>Do I qualify?</span></a>
+                                        <a href="/do-i-qualify"><span>Do I qualify?</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -62,10 +62,10 @@ class C12_Steps extends \Elementor\Widget_Base {
                                 <p>Let’s talk about what’s happening and what you’d like to achieve.</p>
                                 <div class="buttons">
                                     <div class="cta">
-                                        <a href="#"><span>Ready to grow?</span></a>
+                                        <a href="#"><span>Ready to innovate?</span></a>
                                     </div>
                                     <div class="cta secondary">
-                                        <a href="#"><span>Do I qualify?</span></a>
+                                        <a href="/do-i-qualify"><span>Do I qualify?</span></a>
                                     </div>
                                 </div>
                             </div>
