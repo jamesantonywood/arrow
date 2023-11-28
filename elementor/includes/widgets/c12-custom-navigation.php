@@ -65,7 +65,7 @@ class C12_Custom_Navigation extends \Elementor\Widget_Base {
                     <?= get_custom_logo(); ?>
                 </div>
                 <div class="cta">
-                    <a href="#"><span>Ready to innovate?</span></a>
+                    <a class="button button--calypso" href="/apply"><span>Ready to innovate?</span></a>
                 </div>
             </div>
 

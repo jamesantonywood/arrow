@@ -69,7 +69,7 @@ class C12_Custom_Footer extends \Elementor\Widget_Base {
                                 <?php foreach($news_posts as $post) : ?>
                                     <div class="post">
                                         <p><?= get_the_date('j F Y', $post->ID); ?></p>
-                                        <h5><?= get_the_title($post->ID); ?></h5>
+                                        <h5><a href="<?= get_the_permalink($post->ID); ?>"><?= get_the_title($post->ID); ?></a></h5>
                                     </div>
                                 <?php endforeach; ?>
                             </div>

@@ -50,25 +50,100 @@ class C12_Steps extends \Elementor\Widget_Base {
                                     <div class="cta">
                                         <a href="/apply"><span>Ready to innovate?</span></a>
                                     </div>
-                                    <div class="cta secondary">
-                                        <a href="/do-i-qualify"><span>Do I qualify?</span></a>
+                                    <div class="help-links">
+                                        <a href="/do-i-qualify">Do I qualify?</a>
                                     </div>
                                 </div>
                             </div>
                             <!-- endforeach -->
+
                             <div class="slide swiper-slide">
                                 <div class="number"><img src="<?= plugins_url('../../assets/img/numbers/blue/blue_2.png', __FILE__);  ?>"></div>
-                                <h3>Get in touch with arrow</h3>
-                                <p>Let’s talk about what’s happening and what you’d like to achieve.</p>
+                                <h3>You’ll be assigned an Arrow Innovation Associate</h3>
+                                <p>This is your single point of contact and look after your project.</p>
                                 <div class="buttons">
                                     <div class="cta">
                                         <a href="#"><span>Ready to innovate?</span></a>
                                     </div>
-                                    <div class="cta secondary">
-                                        <a href="/do-i-qualify"><span>Do I qualify?</span></a>
+                                    <div class="help-links">
+                                        <a href="/do-i-qualify">Do I qualify?</a>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="slide swiper-slide">
+                                <div class="number"><img src="<?= plugins_url('../../assets/img/numbers/blue/blue_3.png', __FILE__);  ?>"></div>
+                                <h3>We’ll get to know your business and challenges in detail.</h3>
+                                <p>You may know exactly what you need, but your Arrow Innovation Associate will also recommend alternative options that may be even more transformative.</p>
+                                <div class="buttons">
+                                    <div class="cta">
+                                        <a href="#"><span>Ready to innovate?</span></a>
+                                    </div>
+                                    <div class="help-links">
+                                        <a href="/do-i-qualify">Do I qualify?</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide swiper-slide">
+                                <div class="number"><img src="<?= plugins_url('../../assets/img/numbers/blue/blue_4.png', __FILE__);  ?>"></div>
+                                <h3>Using our in-depth knowledge of the resources available</h3>
+                                <p>At the partner universities, we’ll build a tailored action plan for you and put you in touch with the appropriate experts.</p>
+                                <div class="buttons">
+                                    <div class="cta">
+                                        <a href="#"><span>Ready to innovate?</span></a>
+                                    </div>
+                                    <div class="help-links">
+                                        <a href="/do-i-qualify">Do I qualify?</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide swiper-slide">
+                                <div class="number"><img src="<?= plugins_url('../../assets/img/numbers/blue/blue_5.png', __FILE__);  ?>"></div>
+                                <h3>As your project progresses</h3>
+                                <p>Your Arrow Innovation Associate will ensure everything runs smoothly and keep everyone in the loop.</p>
+                                <div class="buttons">
+                                    <div class="cta">
+                                        <a href="#"><span>Ready to innovate?</span></a>
+                                    </div>
+                                    <div class="help-links">
+                                        <a href="/do-i-qualify">Do I qualify?</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide swiper-slide">
+                                <div class="number"><img src="<?= plugins_url('../../assets/img/numbers/blue/blue_6.png', __FILE__);  ?>"></div>
+                                <h3>You see your innovation flourish</h3>
+                                <p>Thanks to targeted input from the right experts.</p>
+                                <div class="buttons">
+                                    <div class="cta">
+                                        <a href="#"><span>Ready to innovate?</span></a>
+                                    </div>
+                                    <div class="help-links">
+                                        <a href="/do-i-qualify">Do I qualify?</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide swiper-slide">
+                                <div class="number"><img src="<?= plugins_url('../../assets/img/numbers/blue/blue_7.png', __FILE__);  ?>"></div>
+                                <h3>We’ll sort out any funding needed</h3>
+                                <p>So rest assured there’s no cost to you. Our work is paid for by the UK Shared Prosperity Fund, North of Tyne Combined Authority and Durham County Council.</p>
+                                <div class="buttons">
+                                    <div class="cta">
+                                        <a href="#"><span>Ready to innovate?</span></a>
+                                    </div>
+                                    <div class="help-links">
+                                        <a href="/do-i-qualify">Do I qualify?</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
                         </div>
                         <div class="slide-navigation">
                             <div class="prev">

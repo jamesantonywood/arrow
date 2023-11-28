@@ -38,43 +38,41 @@
             }
         } 
     }
+}
 
-
-    .help-links {
-        a {
-            font-size: 0.75em;
-            color: var(--e-global-color-accent);
-            padding-left: 24px;
-            position: relative;
-            transition: color 0.3s ease;
+.help-links {
+    a {
+        font-size: 0.75em;
+        color: var(--e-global-color-accent);
+        padding-left: 24px;
+        position: relative;
+        transition: color 0.3s ease;
+        &::before {
+            content: '?';
+            font-size: 0.5rem;
+            line-height: 0;
+            color: var(--white);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--e-global-color-accent);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        &:hover {
+            color: var(--e-global-color-text);
             &::before {
-                content: '?';
-                font-size: 0.5rem;
-                line-height: 0;
-                color: var(--white);
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                background-color: var(--e-global-color-accent);
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transition: background-color 0.3s ease;
-                text-align: center;
-            }
-            &:hover {
-                color: var(--e-global-color-text);
-                &::before {
-                    background-color: var(--e-global-color-text);
-                }
+                background-color: var(--e-global-color-text);
             }
         }
     }
-
 }
 
 

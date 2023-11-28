@@ -43,7 +43,7 @@ class C12_Home_Hero extends \Elementor\Widget_Base {
                         <h1 class="jumbotron">Supercharge Your Business</h1>
                         <p>Growing a business brings a variety of challenges, but you don’t have to do it all alone.</p>
                         <div class="cta">
-                            <a href="#"><span>Ready to grow?</span></a>
+                            <a href="#"><span>Ready to innovate?</span></a>
                         </div>
                     </div>
                     <div class="arrow-container">
