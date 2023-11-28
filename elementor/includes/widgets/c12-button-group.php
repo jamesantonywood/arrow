@@ -100,7 +100,7 @@ class C12_Button_Group extends \Elementor\Widget_Base {
                 <?php if($settings['buttons']) : ?>
                     <?php foreach($settings['buttons'] as $button) : ?>
                         <div class="cta <?= $button['button-type']; ?>">
-                            <a href="<?= $button['button-url']['url']; ?>"><span><?= $button['button-text']; ?></span></a>
+                            <a class="button button--calypso" href="<?= $button['button-url']['url']; ?>"><span><?= $button['button-text']; ?></span></a>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
