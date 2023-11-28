@@ -35,7 +35,7 @@ class C12_Custom_Navigation extends \Elementor\Widget_Base {
     }
 
     protected function register_controls() {
-        
+
     }
 
     protected function render() {

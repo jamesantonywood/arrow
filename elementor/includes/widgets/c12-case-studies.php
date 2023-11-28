@@ -57,7 +57,6 @@ class C12_Case_Studies extends \Elementor\Widget_Base {
                                 if($logo) { ?>
                                     <div class="logo"><img src="<?= $logo['url']?>" alt=""></div>
                                 <?php } ?>
-                                <!-- TODO: If no logo replace with name -->
 
                                 <h2><?= get_field('subline',$case_study->ID); ?></h2>
                                 <p><?= get_field('location', $case_study->ID); ?></p>
