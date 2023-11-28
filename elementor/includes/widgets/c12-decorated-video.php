@@ -91,6 +91,7 @@ class C12_Decorated_Video extends \Elementor\Widget_Base {
         $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
         $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
 
+
         if (preg_match($longUrlRegex, $url, $matches)) {
             $youtube_id = $matches[count($matches) - 1];
         }
@@ -104,7 +105,6 @@ class C12_Decorated_Video extends \Elementor\Widget_Base {
     protected function render() {
         $settings = $this->get_settings_for_display();
         // $embedd_code = get_field('content')['embedd_code'];
-        
         ?>
             <div class="c12-decorated-video">
                 <div class="video">
@@ -118,9 +118,6 @@ class C12_Decorated_Video extends \Elementor\Widget_Base {
                     
                 </div>
             </div>
-            
-
-
         <?php
     }
 

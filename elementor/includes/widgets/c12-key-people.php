@@ -38,21 +38,23 @@ class C12_Key_People extends \Elementor\Widget_Base {
         $people = get_field('people');
         ?>
             <div class="c12-widget c12-key-people">
-                <?php foreach($people as $person) : ?>
-                <div class="person">
-                    <div class="credit">
-                        <div class="image">
-                            <?php if(!empty($person['headshot'])) : ?>
-                                <img src="<?= $person['headshot']['url'] ?>"> 
-                            <?php endif; ?>
-                        </div>
-                        <div class="content">
-                            <h5><?= $person['name']; ?></h5>
-                            <p><?= $person['location_role']; ?></p>
+                <?php if ($people) : ?>
+                    <?php foreach($people as $person) : ?>
+                    <div class="person">
+                        <div class="credit">
+                            <div class="image">
+                                <?php if(!empty($person['headshot'])) : ?>
+                                    <img src="<?= $person['headshot']['url'] ?>"> 
+                                <?php endif; ?>
+                            </div>
+                            <div class="content">
+                                <h5><?= $person['name']; ?></h5>
+                                <p><?= $person['location_role']; ?></p>
+                            </div>
                         </div>
                     </div>
-               </div>
-               <?php endforeach; ?>
+                <?php endforeach; ?>
+               <?php endif; ?>
             </div>
         <?php
     }
