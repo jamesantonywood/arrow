@@ -30,7 +30,50 @@ class C12_University_Graphic extends \Elementor\Widget_Base {
     }
 
     protected function register_controls() {
-        
+        $this->start_controls_section(
+			'content_section',
+			[
+				'label' => esc_html__( 'Content', 'textdomain' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'universities',
+			[
+				'label' => esc_html__( 'Universities', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::REPEATER,
+				'fields' => [
+					[
+						'name' => 'university_title',
+						'label' => esc_html__( 'University Title', 'textdomain' ),
+						'type' => \Elementor\Controls_Manager::TEXT,
+						'default' => esc_html__( 'University Title' , 'textdomain' ),
+						'label_block' => true,
+					],
+					[
+						'name' => 'university_content',
+						'label' => esc_html__( 'University Content', 'textdomain' ),
+						'type' => \Elementor\Controls_Manager::WYSIWYG,
+						'default' => esc_html__( 'University Content' , 'textdomain' ),
+						'show_label' => false,
+					],
+				],
+				'default' => [
+					[
+						'university_title' => esc_html__( 'Title #1', 'textdomain' ),
+						'university_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'textdomain' ),
+					],
+					[
+						'university_title' => esc_html__( 'Title #2', 'textdomain' ),
+						'university_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'textdomain' ),
+					],
+				],
+				'title_field' => '{{{ university_title }}}',
+			]
+		);
+
+		$this->end_controls_section();
     }
     
 
@@ -74,16 +117,14 @@ class C12_University_Graphic extends \Elementor\Widget_Base {
                     </div>
                     <div class="slides swiper university-swiper">
                         <div class="slides-container swiper-wrapper">
-                            <!-- foreach slide -->
+                           
+                            <?php foreach($settings['universities'] as $university) : ?>
                             <div class="slide swiper-slide">
-                                <h3>Durham University</h3>
-                                <p>We can open the door to fresh thinking, scientific expertise and technical facilities for every project—so you can get results that drive a sea-change in your success. We do this by acting as your gateway to the wealth of knowledge at four world-class universities.</p>
+                                <h3><?= $university['university_title']; ?></h3>
+                                <?= $university['university_content']; ?>
                             </div>
-                            <!-- end -->
-                            <div class="slide swiper-slide">
-                                <h3>Second Slide</h3>
-                                <p>We can open the door to fresh thinking, scientific expertise and technical facilities for every project—so you can get results that drive a sea-change in your success. We do this by acting as your gateway to the wealth of knowledge at four world-class universities.</p>
-                            </div>
+                            <?php endforeach; ?>
+                   
                         </div>
                         <div class="slide-navigation">
                             <div class="prev">

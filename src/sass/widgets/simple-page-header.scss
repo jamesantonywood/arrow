@@ -1,8 +1,8 @@
 
 .c12-simple-page-header {
     background: var(--e-global-color-secondary);
-    min-height: 24em;
-    height: 50vh;
+    min-height: 16em;
+    height: 25vh;
     max-height: 450px;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,11 @@
         h1 {
             max-width: 540px;
         }
+    }
+
+    @media screen and (min-width: 768px) {
+        min-height: 24em;
+        height: 50vh;
     }
     
 }

@@ -1,14 +1,13 @@
 .c12-university-graphic {
 
     .inner {
-        display: flex;
         z-index: 0;
-        .image,
-        .slides {
-            flex: 0 50%;
-        }
+        
+  
+        
         .image {
             position: relative;
+            display: none;
             svg {
                 position: absolute;
                 right: 0;
@@ -16,27 +15,30 @@
                 transform: translateY(-50%);
             }
         }
+
+ 
+
         .slides {
             border: 1px solid var(--e-global-color-a70a27c);
             border-radius: 10px;
-            margin: 75px 0;
+            margin: 10px 0;
             position: relative;
             .slide-navigation {
                 position: absolute; 
                 bottom: 24px;
-                left: 45px;
+                left: 16px;
                 width: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 z-index: 2;
+                user-select: none;
                 .pagination {
                     margin: 0;
                     display: inline-block;
                     width: 100px;
                     text-align: center;
                     font-size: 0.75em;
-
                 }
                 .prev,
                 .next {
@@ -64,13 +66,37 @@
                 }
             }
             .slide {
-                padding: 37px 48px 67px;
+                padding: 16px 16px 64px;
                 h3 {
                     font-size: 1.5em;
                 }
             }
         }
        
+        @media screen and (min-width: 768px) {
+            display: flex;
+            .image,
+            .slides {
+                flex: 0 50%;
+                .slide {
+                    padding: 37px 48px 67px;
+                }
+               
+                
+            }
+            .image {
+                display: block;
+            }
+
+            .slides {
+
+                margin: 75px 0;
+                .slide-navigation {
+                    left: 45px;
+                }
+            }
+            
+        }
         
     }
 }

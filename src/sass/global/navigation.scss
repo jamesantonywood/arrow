@@ -86,12 +86,14 @@ body.menu-open {
 
     .logo { 
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
         gap: 28px;
-        max-width: 296px; 
+        width: 100%; 
+;
         img {
-            max-width: 100%;
+            max-width: 200px;
         }
     }
 
@@ -103,6 +105,10 @@ body.menu-open {
         .logo {
             gap: 28px;
             max-width: 296px; 
+            flex-direction: row;
+            img {
+                max-width: 100%;
+            }
         }
         .cta {
             display: block;

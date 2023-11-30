@@ -38,7 +38,14 @@
         &:nth-child(2) {
             justify-content: flex-end;
         }
-        .marquee-container {
+
+        .marquee {
+            display: flex;
+            gap: 16px;
+        }
+
+
+        .marquee-item {
             display: flex;
             gap: 16px;
             flex-wrap: nowrap;
@@ -46,7 +53,8 @@
             .testimonial {
                 cursor: pointer;
                 width: 500px;
-                height: 226px;
+                min-height: 226px;
+                max-width: calc(100vw - 64px);
 
                 background-color: #222222;
                 border: 1px solid #2E3333;
@@ -55,6 +63,7 @@
                 color: var(--white);
                 display: flex;
                 flex-direction: column;
+                position: relative;
                 div {
                     flex-grow: 0;
                 }
@@ -62,13 +71,28 @@
                     font-size: 1.125em;
                     font-weight: 700;
                     flex-grow: 1;
+                    display: -webkit-box;
+                    --webkit-line-clamp: 3;
+                    --webkit-box-orient: vertical;  
+                    overflow: hidden;
+                    text-overflow: ellipsis ellipsis;
+                    max-height: 4.5em;
+                    padding-right: 50px;
                 }
                 .button {
                     justify-self: flex-end;
                     align-self: flex-end;
                     font-size: 0.75em;
                     padding-left: 18px;
-                    position: relative;
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    a {
+                        color: var(--white);
+                        &:hover {
+                            color: var(--white);
+                        }
+                    }
                     &::before {
                         content: '';
                         width: 10px;
@@ -85,6 +109,7 @@
 
                 &:hover {
                     .button {
+                        
                         &::before {
                             background-color: rgba(255,255,255, 0.25);
                         }

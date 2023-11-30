@@ -3,7 +3,6 @@ const sass = require('gulp-sass')(require('sass'))
 const sourcemaps = require('gulp-sourcemaps')
 const cleanCSS = require('gulp-clean-css')
 const webpack = require('webpack-stream')
-// const autoprefixer = require('gulp-autoprefixer')
 
 gulp.task('sass', () => {
     return gulp
