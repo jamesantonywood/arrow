@@ -104,19 +104,19 @@ class C12_Elementor_Plugin_Elementor {
     public function register_controls() {
 
     }
-    
+
 
     // Same Idea with handling scripts I don't like the idea of individually loading everything.
     public function register_styles() {
         // Widget Specific Styles
-        wp_register_style( 'c12-widget-styles', plugins_url( '/assets/css/styles.css', __FILE__ ) );
+        wp_register_style( 'c12-widget-styles', plugins_url( '/assets/css/styles.css', __FILE__ ), [], null);
     }
 
     public function register_scripts() {
         // Widget Specific Scripts
         wp_register_script( 'c12-widget-scripts', plugins_url( 'assets/js/app.js', __FILE__ ) );
     }
-    
+
 
 }
 
