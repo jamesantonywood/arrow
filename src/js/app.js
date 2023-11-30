@@ -8,6 +8,109 @@ import swipers from "./modules/swipers"
 
 
 swipers()
+// 
+
+const marquee = () => {
+    const marqueeContainers = document.querySelectorAll('.marquee-container')
+    marqueeContainers.forEach(marqueeContainer => {
+        const marquee = marqueeContainer.querySelector('.marquee')
+        const dir = marquee.getAttribute('data-direction')
+        let operator = ''
+        dir === 'left' ? operator = '-' : operator = ''
+        const item = marquee.querySelector('.marquee-item').cloneNode(true)
+        marquee.appendChild(item)
+       
+        const animation = marquee.animate([
+            { transform: `translate(0, 0)` },
+            { transform: `translate(${operator}50%, 0)` }
+        ], {
+            duration: 60000,
+            iterations: Infinity
+        })
+
+        marquee.addEventListener('mouseenter', () => {
+            animation.pause();
+        })
+        marquee.addEventListener('mouseleave', () => {
+            animation.play();
+        })
+
+    })
+}
+marquee()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const mq870 = window.matchMedia('(min-width: 870px)')
+
+const whatWeDoAnimation = () => {
+    const testArrow = document.querySelector('[data-animation="what-we-do"]')
+    if (!testArrow) return
+
+    const stepsTag = document.querySelector('.steps-trigger')
+    const animationEnder = document.querySelector('.animation-ender')
+    const bottomArm = testArrow.querySelector('.bottom-arm')
+    const topArm = testArrow.querySelector('.top-arm')
+
+    const timeline = gsap.timeline({
+        defaults: { 
+            scrollTrigger: {   
+                trigger: stepsTag,
+                start: 'top bottom',
+                end: 'top top',
+                scrub: true,
+                debug: true,
+            }
+        }
+    })
+    timeline.to(testArrow, {
+        debug: true,
+        top: "50%",
+        left: "35%",
+    }).to(topArm, {
+        rotate: '135deg'
+    }).to(bottomArm, {
+        rotate: '45deg'
+    })
+
+    gsap.to(testArrow, {
+        debug: true,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: animationEnder,
+            start: 'bottom bottom',
+            end: 'bottom 75%',
+            scrub: true,
+            debug: true,
+        },
+    })
+}
+
+whatWeDoAnimation()
+mq870.addEventListener('change', () => {
+    whatWeDoAnimation()
+})
 
 Splitting()
 const titles = [...document.querySelectorAll('h2[data-splitting]')]

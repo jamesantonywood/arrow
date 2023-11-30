@@ -36,177 +36,66 @@ class C12_Testimonials extends \Elementor\Widget_Base {
 
     protected function render() {
         $settings = $this->get_settings_for_display();
+        $row_1 = get_posts([
+            'post_type' => 'case-studies',
+            'posts_per_page' => -1,
+            'orderby' => 'ID',
+            'order' => 'ASC'
+        ]);
+        $row_2 = get_posts([
+            'post_type' => 'case-studies',
+            'posts_per_page' => -1,
+            'orderby' => 'ID',
+            'order' => 'DESC'
+        ]);
         ?>
             <div class="c12-widget c12-testimonials">
-                <div class="testimonial-row">
-                    <div class="marquee-container">
-                        <!-- foreach testimonial -->
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
+
+                <div class="testimonial-row marquee-container">
+                    <div class="marquee" data-direction="left">
+                        <div class="marquee-item">
+                            <!-- foreach testimonial -->
+                            <?php foreach($row_1 as $testimonial) : ?>
+                                <div class="testimonial">
+                                    <div class="credit">
+                                        <div class="image"></div>
+                                        <div class="content">
+                                            <h5><?= get_field('name', $testimonial->ID); ?></h5>
+                                            <p><?= get_field('role', $testimonial->ID); ?></p>
+                                        </div>
+                                    </div>
+                                    <div class="quote"><?= get_field('quote', $testimonial->ID); ?></div>
+                                    <div class="button">
+                                        <a href="<?= the_permalink($testimonial->ID); ?>">Read Case Study</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
-                        </div>
-                        <!-- End foreach -->
-                        
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
-                                </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
-                                </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
-                                </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
-                                </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
-                                </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
+                            <?php endforeach; ?>
+                            <!-- End foreach -->
                         </div>
                     </div>
                 </div>   
                 
                 <!-- Second Row -->
-                <div class="testimonial-row">
-                    <div class="marquee-container">
-                        <!-- foreach testimonial -->
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
+                <div class="testimonial-row marquee-container">
+                    <div class="marquee" data-direction="right">
+                        <div class="marquee-item">
+                            <!-- foreach testimonial -->
+                            <?php foreach($row_2 as $testimonial) : ?>
+                                <div class="testimonial">
+                                    <div class="credit">
+                                        <div class="image"></div>
+                                        <div class="content">
+                                            <h5><?= get_field('name', $testimonial->ID); ?></h5>
+                                            <p><?= get_field('role', $testimonial->ID); ?></p>
+                                        </div>
+                                    </div>
+                                    <div class="quote"><?= get_field('quote', $testimonial->ID); ?></div>
+                                    <div class="button">
+                                        <a href="<?= the_permalink($testimonial->ID); ?>">Read Case Study</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
-                        </div>
-                        <!-- End foreach -->
-                        
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
-                                </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
-                                </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
-                                </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
-                                </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="credit">
-                                <div class="image"></div>
-                                <div class="content">
-                                    <h5>Dylan McKee</h5>
-                                    <p>Co-Founder, Nebula Labs</p>
-                                </div>
-                            </div>
-                            <div class="quote">We brought our skills from the app sector and they added their expertise in AI, data analysis and machine learning.</div>
-                            <div class="button">
-                                Read Case Study
-                            </div>
+                            <?php endforeach; ?>
+                            <!-- End foreach -->
                         </div>
                     </div>
                 </div>   

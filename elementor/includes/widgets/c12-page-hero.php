@@ -84,6 +84,30 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'full_height',
+			[
+				'label' => esc_html__( 'Full Height', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Yes', 'textdomain' ),
+				'label_off' => esc_html__( 'No', 'textdomain' ),
+				'return_value' => 'yes',
+				'default' => '',
+			]
+		);
+
+		$this->add_control(
+			'hide_arrow',
+			[
+				'label' => esc_html__( 'Hide Arrow', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Hide', 'textdomain' ),
+				'label_off' => esc_html__( 'Show', 'textdomain' ),
+				'return_value' => 'yes',
+				'default' => '',
+			]
+		);
+
         $this->add_control(
 			'max-width',
 			[
@@ -106,7 +130,7 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
 					'size' => 628,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .arrow-container' => 'max-width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .arrow-container-secondary' => 'width: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -116,12 +140,12 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Bottom Arm Angle', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
-				'min' => 0,
+				'min' => -360,
 				'max' => 360,
 				'step' => 1,
 				'default' => 45,
                 'selectors' => [
-					'{{WRAPPER}} .arrow-container .arrow-arm' => 'rotate: {{VALUE}}deg',
+					'{{WRAPPER}} .arrow-container-secondary .bottom-arm' => 'rotate: {{VALUE}}deg',
 				],
 			]
 		);
@@ -131,12 +155,12 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Top Arm Angle', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
-				'min' => 0,
+				'min' => -360,
 				'max' => 360,
 				'step' => 1,
 				'default' => 3,
                 'selectors' => [
-					'{{WRAPPER}} .arrow-container .arrow-arm.top-arm' => 'rotate: {{VALUE}}deg',
+					'{{WRAPPER}} .arrow-container-secondary .top-arm' => 'rotate: {{VALUE}}deg',
 				],
 			]
 		);
@@ -198,7 +222,7 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .arrow-container' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .arrow-container-secondary' => 'top: {{SIZE}}{{UNIT}};',
 				],
                 'condition' => [
                     'set-top' => 'yes',
@@ -236,7 +260,7 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .arrow-container' => 'right: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .arrow-container-secondary' => 'right: {{SIZE}}{{UNIT}};',
 				],
                 'condition' => [
                     'set-right' => 'yes',
@@ -274,7 +298,7 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .arrow-container' => 'bottom: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .arrow-container-secondary' => 'bottom: {{SIZE}}{{UNIT}};',
 				],
                 'condition' => [
                     'set-bottom' => 'yes',
@@ -312,7 +336,7 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .arrow-container' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .arrow-container-secondary' => 'left: {{SIZE}}{{UNIT}};',
 				],
                 'condition' => [
                     'set-left' => 'yes',
@@ -324,7 +348,7 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
     protected function render() {
         $settings = $this->get_settings_for_display();
         ?>
-            <div class="c12-widget c12-page-hero c12-hero">
+            <div class="c12-widget c12-page-hero c12-hero <?= $settings['full_height'] ? 'full-height' : ''; ?>">
                 <div class="inner">
                     <div class="content">
                         <h1>
@@ -334,9 +358,9 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
                         <p><?= $settings['page-description']; ?></p>
                     </div>
 
-                    <div class="arrow-container" data-color="<?= $settings['colour']; ?>">
-                        <div class="arrow-arm"></div>
-                        <div class="arrow-arm top-arm"></div>
+                    <div class="arrow-container-secondary <?= $settings['hide_arrow'] ? 'hidden' : ''; ?>" data-color="<?= $settings['colour']; ?>">
+                        <div class="bottom-arm"></div>
+                        <div class="top-arm"></div>
                     </div>
                 </div>
             </div>

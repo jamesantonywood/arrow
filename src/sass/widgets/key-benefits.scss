@@ -3,9 +3,18 @@
 .c12-key-benefits {
     display: grid;
     // TODO This Collapses?
-    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     margin: 56px 0;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 
     .benefit {
         position: relative;

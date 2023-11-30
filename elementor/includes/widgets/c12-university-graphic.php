@@ -30,7 +30,50 @@ class C12_University_Graphic extends \Elementor\Widget_Base {
     }
 
     protected function register_controls() {
+        $this->start_controls_section(
+			'content_section',
+			[
+				'label' => esc_html__( 'Content', 'textdomain' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
 
+		$this->add_control(
+			'universities',
+			[
+				'label' => esc_html__( 'Universities', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::REPEATER,
+				'fields' => [
+					[
+						'name' => 'university_title',
+						'label' => esc_html__( 'University Title', 'textdomain' ),
+						'type' => \Elementor\Controls_Manager::TEXT,
+						'default' => esc_html__( 'University Title' , 'textdomain' ),
+						'label_block' => true,
+					],
+					[
+						'name' => 'university_content',
+						'label' => esc_html__( 'University Content', 'textdomain' ),
+						'type' => \Elementor\Controls_Manager::WYSIWYG,
+						'default' => esc_html__( 'University Content' , 'textdomain' ),
+						'show_label' => false,
+					],
+				],
+				'default' => [
+					[
+						'university_title' => esc_html__( 'Title #1', 'textdomain' ),
+						'university_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'textdomain' ),
+					],
+					[
+						'university_title' => esc_html__( 'Title #2', 'textdomain' ),
+						'university_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'textdomain' ),
+					],
+				],
+				'title_field' => '{{{ university_title }}}',
+			]
+		);
+
+		$this->end_controls_section();
     }
 
 
@@ -74,24 +117,14 @@ class C12_University_Graphic extends \Elementor\Widget_Base {
                     </div>
                     <div class="slides swiper university-swiper">
                         <div class="slides-container swiper-wrapper">
-                            <!-- foreach slide -->
+
+                            <?php foreach($settings['universities'] as $university) : ?>
                             <div class="slide swiper-slide">
-                                <h3>Newcastle University</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
+                                <h3><?= $university['university_title']; ?></h3>
+                                <?= $university['university_content']; ?>
                             </div>
-                            <div class="slide swiper-slide">
-                                <h3>Durham University</h3>
-                                <p>Pellentesque porttitor, velit lacinia egestas auctor, diam eros tempus arcu, nec vulputate augue magna vel risus. Cras non magna vel ante adipiscing rhoncus. Vivamus a mi.</p>
-                            </div>
-                            <div class="slide swiper-slide">
-                                <h3>Northumbria University</h3>
-                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin semper, ante vitae sollicitudin posuere, metus quam iaculis nibh, vitae scelerisque nunc massa eget pede. Sed velit urna, interdum vel, ultricies vel, faucibus at, quam.</p>
-                            </div>
-                            <!-- end -->
-                            <div class="slide swiper-slide">
-                                <h3>University of Sunderland</h3>
-                                <p>Etiam at ligula et tellus ullamcorper ultrices. In fermentum, lorem non cursus porttitor, diam urna accumsan lacus, sed interdum wisi nibh nec nisl. Ut tincidunt volutpat urna.</p>
-                            </div>
+                            <?php endforeach; ?>
+
                         </div>
                         <div class="slide-navigation">
                             <div class="prev">

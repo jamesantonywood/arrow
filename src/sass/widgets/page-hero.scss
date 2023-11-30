@@ -5,8 +5,10 @@
     .content {
         max-width: 738px;
         h1 {
+            // padding-right: 16px;
+            text-wrap: balance;
             span {
-                font-size: 1rem;
+                font-size: 0.85rem;
                 text-transform: uppercase;
                 font-weight: 400;
                 display: block;
@@ -21,8 +23,9 @@
         
     }
      @media screen and (max-width: 768px) {
+        padding: 16px;
         // TODO dont scale height on mobile
-        min-height: unset;
+        // min-height: unset;
         // height: unset;
         aspect-ratio: 9/16;
         .content {

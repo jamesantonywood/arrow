@@ -8,6 +8,10 @@
     max-height: 820px;
     background-color: var(--e-global-color-secondary);
     padding: 50px 36px;
+    
+    &.full-height {
+        max-height: unset;
+    }
 
     .inner {
         width: 100%;
@@ -39,6 +43,7 @@
         .cta {
             display: none;
         }
+        
     }
 
      @media screen and (max-width: 768px) {
