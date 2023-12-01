@@ -4,11 +4,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 import Splitting from "splitting"
 import swipers from "./modules/swipers"
+import caseStudies from "./modules/case-studies"
 
 
 
 swipers()
-// 
+caseStudies()
+//
 
 const marquee = () => {
     const marqueeContainers = document.querySelectorAll('.marquee-container')
@@ -19,7 +21,7 @@ const marquee = () => {
         dir === 'left' ? operator = '-' : operator = ''
         const item = marquee.querySelector('.marquee-item').cloneNode(true)
         marquee.appendChild(item)
-       
+
         const animation = marquee.animate([
             { transform: `translate(0, 0)` },
             { transform: `translate(${operator}50%, 0)` }
@@ -74,8 +76,8 @@ const whatWeDoAnimation = () => {
     const topArm = testArrow.querySelector('.top-arm')
 
     const timeline = gsap.timeline({
-        defaults: { 
-            scrollTrigger: {   
+        defaults: {
+            scrollTrigger: {
                 trigger: stepsTag,
                 start: 'top bottom',
                 end: 'top top',
@@ -119,7 +121,7 @@ const scroll = () => {
         const start = cssVar(title.getAttribute('data-start'))
         const end = cssVar(title.getAttribute('data-end'))
         const chars = title.querySelectorAll('.char')
-       
+
         gsap.fromTo(chars, {
             'will-change': 'color',
             color: start,
