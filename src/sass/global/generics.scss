@@ -4,6 +4,7 @@
     gap: 8px;
     margin-top: 40px;
     .cat {
+        opacity: 0.5;
         cursor: pointer;
         display: inline-block;
         font-size: 0.625em;
@@ -13,5 +14,30 @@
         color: var(--e-global-color-6d34e3e);
         border-radius: 5px 10px 10px 5px;
         text-transform: uppercase;
+
+        &.active {
+            opacity: 1;
+        }
+
+        &[data-color="blue"] {
+            background: var(--e-global-color-4507a68);
+            color: #fff;
+        }
+        &[data-color="purple"] {
+            background: rgba(51,54,107,1);
+            color: #fff;
+        }
+        &[data-color="red"] {
+            background: rgba(200,22,24,1);
+            color: #fff;
+        }
+        &[data-color="yellow"] {
+            background: var(--e-global-color-2ee2a9c);
+            color: #fff;
+        }
+        &[data-color="green"] {
+            background: rgba(16,94,67,1);
+            color: #fff;
+        }
     }
 }
