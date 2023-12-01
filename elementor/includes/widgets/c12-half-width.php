@@ -49,6 +49,9 @@ class C12_Half_Width extends \Elementor\Widget_Base {
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
 				],
+                'dynamic' => [
+                    'active' => true,
+                ],
 			]
 		);
 

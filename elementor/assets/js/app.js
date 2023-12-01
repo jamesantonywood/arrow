@@ -10037,8 +10037,37 @@ __webpack_require__.r(__webpack_exports__);
           },
     })
 
+    const factSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.facts-swiper', {
+        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+        pagination: {
+            el: ".pagination",
+            type: "custom",
+            renderCustom: function (swiper, current, total) {
+                var paginationHtml = '';
+                for (var i = 0; i < total; i++) {
+                    var className = 'dot swiper-pagination-bullet';
+                    if (i === current - 1) {
+                        className += 'dot swiper-pagination-bullet-active';
+                    }
+                    paginationHtml += '<span class="' + className + '"></span>';
+                }
+
+                // Combine the progress bar and pagination numbers
+                return paginationHtml;
+            }
+
+        },
+        navigation: {
+            nextEl: '.next',
+            prevEl: '.prev',
+        },
+    })
+
+
+
 
 });
+
 
 /***/ }),
 

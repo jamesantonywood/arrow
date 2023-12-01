@@ -1,0 +1,16 @@
+<svg id="Group_210" data-name="Group 210" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76.971" height="111.977" viewBox="0 0 76.971 111.977">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_217" data-name="Rectangle 217" width="76.971" height="111.976" fill="none"/>
+    </clipPath>
+  </defs>
+  <path id="Path_385" data-name="Path 385" d="M76.292,117.089l5.794,56.779H65.864l5.33-56.779" transform="translate(-35.336 -62.818)" fill="#c3c2c0" stroke="#0e1111" stroke-width="1"/>
+  <g id="Group_209" data-name="Group 209">
+    <g id="Group_208" data-name="Group 208" clip-path="url(#clip-path)">
+      <circle id="Ellipse_43" data-name="Ellipse 43" cx="7.997" cy="7.997" r="7.997" transform="translate(30.486 37.813)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_387" data-name="Path 387" d="M68.81,43.059A59.8,59.8,0,0,1,67.658,31.02c0-11.721,7.123-26.431,7.123-26.431S81.9,19.3,81.9,31.02a59.834,59.834,0,0,1-1.152,12.039" transform="translate(-36.299 -2.462)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_388" data-name="Path 388" d="M92.508,93.233a52.355,52.355,0,0,1,10.343,4.642c9.891,5.71,18.742,19.046,18.742,19.046s-15.974-1-25.865-6.708a52.387,52.387,0,0,1-9.192-6.637" transform="translate(-46.427 -50.02)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_389" data-name="Path 389" d="M38.825,103.717a52.031,52.031,0,0,1-9.157,6.617C19.811,116.024,3.881,117,3.881,117s8.807-13.31,18.663-19a52.021,52.021,0,0,1,10.309-4.622" transform="translate(-2.082 -50.095)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
