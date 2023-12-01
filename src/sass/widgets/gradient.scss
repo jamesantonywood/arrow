@@ -3,5 +3,25 @@
         height: 8px;
         width: 100%;
         background-image: linear-gradient(90deg,  rgba(16,94,67,1) 13%, rgba(162,198,28,1) 115%);
+
+        &[data-color="green"] {
+            background-image: linear-gradient(90deg, rgba(16,94,67,1) 13%, rgba(162,198,28,1) 115%);
+        }
+
+        &[data-color="blue"] {
+            background-image: linear-gradient(90deg, rgba(51,54,107,1) 13%, rgba(3,194,242,1) 115%);;
+        }
+
+        &[data-color="red"] {
+            background-image: linear-gradient(90deg, rgba(200,22,24,1) 13%, rgba(240,157,161,1) 115%);
+        }
+
+        &[data-color="yellow"] {
+            background-image: linear-gradient(90deg, rgba(220,117,38,1) 13%, rgba(253,197,51,1) 115%);
+        }
+
+        &[data-color="purple"] {
+            background-image: linear-gradient(90deg, rgba(51,54,107,1) 13%, rgba(194,152,198,1) 115%);
+        }
     }
 }

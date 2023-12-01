@@ -45,6 +45,9 @@ class C12_Simple_Page_Header extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => esc_html__( 'Default title', 'textdomain' ),
 				'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
+                'dynamic' => [
+                    'active' => true,
+                ],
 			]
 		);
 

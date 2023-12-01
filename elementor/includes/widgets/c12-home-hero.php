@@ -37,7 +37,7 @@ class C12_Home_Hero extends \Elementor\Widget_Base {
     protected function render() {
         $settings = $this->get_settings_for_display();
         ?>
-            <div class="c12-widget c12-home-hero c12-hero">
+            <div class="c12-widget c12-home-hero c12-hero hide-cta">
                 <div class="inner">
                     <div class="content">
                         <h1 class="jumbotron">Supercharge Your Business</h1>

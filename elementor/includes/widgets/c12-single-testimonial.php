@@ -86,6 +86,8 @@ class C12_Single_Testimonial extends \Elementor\Widget_Base {
         ?>
             <div class="c12-widget c12-single-testimonial">
                <blockquote>
+                    <div class="open-quote"><img src="<?= plugins_url('../../assets/img/open_quote.png', __FILE__); ?>"></div>
+                    <div class="close-quote"><img src="<?= plugins_url('../../assets/img/close_quote.png', __FILE__); ?>"></div>
                     <?= $settings['quote']; ?>
                     <cite class="credit">
                         <div class="image"></div>
