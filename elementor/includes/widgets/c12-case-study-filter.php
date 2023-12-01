@@ -59,7 +59,7 @@ class C12_Case_Study_Filter extends \Elementor\Widget_Base {
                 </div>
 
                 <div class="help-links">
-                    <a href="#">Do I qualify?</a>
+                    <a href="/do-i-qualify">Do I qualify?</a>
                 </div>
 
             </div>

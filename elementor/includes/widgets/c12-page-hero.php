@@ -76,6 +76,40 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
         $this->end_controls_section();
         // END
 
+		$this->start_controls_section(
+			'style',
+			[
+				'label' => esc_html__( 'Arrow Controls', 'textdomain' ),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'text_align',
+			[
+				'label' => esc_html__( 'Alignment', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::CHOOSE,
+				'options' => [
+					'left' => [
+						'title' => esc_html__( 'Left', 'textdomain' ),
+						'icon' => 'eicon-text-align-left',
+					],
+					'center' => [
+						'title' => esc_html__( 'Center', 'textdomain' ),
+						'icon' => 'eicon-text-align-center',
+					],
+					'right' => [
+						'title' => esc_html__( 'Right', 'textdomain' ),
+						'icon' => 'eicon-text-align-right',
+					],
+				],
+				'default' => 'left',
+				'toggle' => true,
+			]
+		);
+
+		$this->end_controls_section();
+
         $this->start_controls_section(
 			'arrow-controls',
 			[
@@ -348,7 +382,7 @@ class C12_Page_Hero extends \Elementor\Widget_Base {
     protected function render() {
         $settings = $this->get_settings_for_display();
         ?>
-            <div class="c12-widget c12-page-hero c12-hero <?= $settings['full_height'] ? 'full-height' : ''; ?>">
+            <div class="c12-widget c12-page-hero c12-hero <?= $settings['full_height'] ? 'full-height' : ''; ?> <?= $settings['text_align'] ?>">
                 <div class="inner">
                     <div class="content">
                         <h1>

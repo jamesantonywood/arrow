@@ -1,25 +1,25 @@
 .c12-single-testimonial {
-    padding: 90px 36px;
+    padding: 45px 16px;
     color: var(--white);
     blockquote {
         max-width: 844px;
         margin: 0 auto;
         padding: 90px 0; 
-        font-size: 2.5em;
+        font-size: min(max(1.5em, 6vw), 2.5em) !important;
         font-weight: 700;
         line-height: 1.25;
         position: relative;
-        &::before,
-        &::after {
+        .open-quote,
+        .close-quote {
             content: '';
-            border: 1px solid red;
+            // border: 1px solid red;
             position: absolute;
             width: 80px;
             height: 80px;
             top: 0;
             left: 0;
         }
-        &::after {
+       .close-quote {
             top: unset;
             left: unset;
             bottom: 0;
@@ -43,6 +43,10 @@
             }
         }
         
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 90px 36px;
     }
 
 }

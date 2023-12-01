@@ -45,14 +45,10 @@
             color: var(--e-global-color-text);
             text-align: center;
             padding: 90px 64px;
-            .icon {
-                svg path {
-                    fill: var(--e-global-color-secondary);
-                }
-            }
+           
             h3 {
-                font-size: 1.75rem;
-                line-height: 1;
+                font-size: 1.5rem;
+                line-height: 1.2;
                 margin: 0;
             }
         }

@@ -97,6 +97,26 @@ class C12_Key_Benefits extends \Elementor\Widget_Base {
             ]
         );
 
+        $repeater->add_control(
+            'icon',
+            [
+                'label' => esc_html__( 'Icon', 'textdomain' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'default' => 'one-to-one',
+                'options' => [
+                    'one-to-one' => esc_html__( 'One to one', 'textdomain' ),
+                    'innovation-support' => esc_html__( 'Innovation support', 'textdomain' ),
+                    'research-and-development'  => esc_html__( 'Research and development', 'textdomain' ),
+                    'proof-and-concept' => esc_html__( 'Proof of concept', 'textdomain' ),
+                    'specialist-data' => esc_html__( 'Specialist data', 'textdomain' ),
+                    'equipment' => esc_html__( 'Equipment', 'textdomain' ),
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .your-class' => 'border-style: {{VALUE}};',
+                ],
+            ]
+        );
+
         $this->add_control(
             'items',
             [
@@ -127,7 +147,9 @@ class C12_Key_Benefits extends \Elementor\Widget_Base {
                 <!-- foreach benefit -->
                 <div class="benefit">
                     <div class="background"></div>
-                    <div class="icon"></div>
+                    <div class="icon">
+                    <?= file_get_contents(plugins_url('../../assets/img/icons/key-benefits/' . $item['icon'] . '.svg', __FILE__)); ?>
+                    </div>
                     <div class="content">
                         <h3><?=$item['title']?></h3>
                         <p><?=$item['subtitle']?></p>

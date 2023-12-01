@@ -85,6 +85,16 @@
     }
 }
 
+.single .c12-archive-sidebar {
+    padding-top: 25px;
+    position: relative;
+    padding-right: unset;
+    padding-left: 50px;
+    .filter-group::after {
+        content: none;
+    }
+}
+
 
 .c12-case-studies {
 

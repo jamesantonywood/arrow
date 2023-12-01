@@ -56,7 +56,9 @@ class C12_Testimonials extends \Elementor\Widget_Base {
                         <div class="marquee-item">
                             <!-- foreach testimonial -->
                             <?php foreach($row_1 as $testimonial) : ?>
+                                <a href="<?= the_permalink($testimonial->ID); ?>">
                                 <div class="testimonial">
+                                
                                     <div class="credit">
                                         <div class="image"></div>
                                         <div class="content">
@@ -66,9 +68,11 @@ class C12_Testimonials extends \Elementor\Widget_Base {
                                     </div>
                                     <div class="quote"><?= get_field('quote', $testimonial->ID); ?></div>
                                     <div class="button">
-                                        <a href="<?= the_permalink($testimonial->ID); ?>">Read Case Study</a>
+                                        Read Case Study
                                     </div>
+                                    
                                 </div>
+                                </a>
                             <?php endforeach; ?>
                             <!-- End foreach -->
                         </div>
@@ -81,6 +85,7 @@ class C12_Testimonials extends \Elementor\Widget_Base {
                         <div class="marquee-item">
                             <!-- foreach testimonial -->
                             <?php foreach($row_2 as $testimonial) : ?>
+                                <a href="<?= the_permalink($testimonial->ID); ?>">
                                 <div class="testimonial">
                                     <div class="credit">
                                         <div class="image"></div>
@@ -91,9 +96,12 @@ class C12_Testimonials extends \Elementor\Widget_Base {
                                     </div>
                                     <div class="quote"><?= get_field('quote', $testimonial->ID); ?></div>
                                     <div class="button">
-                                        <a href="<?= the_permalink($testimonial->ID); ?>">Read Case Study</a>
+                                        Read Case Study
                                     </div>
+                                    
+                                    
                                 </div>
+                                </a>
                             <?php endforeach; ?>
                             <!-- End foreach -->
                         </div>

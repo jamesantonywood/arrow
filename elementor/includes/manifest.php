@@ -157,6 +157,12 @@ $available_addons = [
         'version'   => '1.0.0',
         'enabled'  =>  true
     ],
+    [
+        'classname' => '\C12_Thank_You',
+        'include' => __DIR__ . '/widgets/c12-thank-you.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
 ];
 
 $blacklisted_addons = [];

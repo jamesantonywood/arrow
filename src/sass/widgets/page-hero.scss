@@ -2,6 +2,7 @@
 .c12-page-hero {
     // TODO REMOVE FOR ANIMATION...
     overflow: hidden;
+   
     .content {
         max-width: 738px;
         h1 {
@@ -21,7 +22,38 @@
             // text-wrap: balance;
         }
         
+        
+
     }
+
+    &.center {
+        padding-bottom: 50px;
+        .inner {
+            justify-content: center;
+        }
+        h1, p {
+            
+            text-align: center;
+        }
+        p {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+    }
+
+    &.thank-you {
+        .inner {
+            justify-content: center;
+            align-items: center;
+            h1 {
+                margin-bottom: 50px;
+            }
+            .cta {
+                text-align: center;
+            }
+        }
+    }
+
      @media screen and (max-width: 768px) {
         padding: 16px;
         // TODO dont scale height on mobile
@@ -35,6 +67,21 @@
             }
             p {
                 font-size: 1em;
+            }
+        }
+
+       
+    }
+
+    @media screen and (max-width: 865px) {
+        &.thank-you {
+            .inner {
+                justify-content: center;
+                align-items: flex-end;
+                padding-bottom: 75px;
+                .cta {
+                    text-align: center;
+                }
             }
         }
     }
