@@ -66,7 +66,7 @@ class C12_Case_Study_Filter extends \Elementor\Widget_Base {
                 foreach ($support_type_terms as $support_type_term) {
                     $theme = get_field('theme',$support_type_term->taxonomy . '_' . $support_type_term->term_id);
                     ?>
-                    <li class="cat <?=$support_type_term->slug?>" data-color="<?= $theme ?>"><?=$support_type_term->name?></li>
+                    <li class="cat <?=$support_type_term->slug?>" data-filter="<?=$support_type_term->slug?>" data-color="<?= $theme ?>"><?=$support_type_term->name?></li>
                 <?php } ?>
                 </ul>
             </div>
@@ -77,7 +77,7 @@ class C12_Case_Study_Filter extends \Elementor\Widget_Base {
                     foreach ($sector_terms as $sector_term) {
                         $theme = get_field('theme',$sector_term->taxonomy . '_' . $sector_term->term_id);
                         ?>
-                        <li class="cat <?=$sector_term->slug?>" data-color="<?= $theme ?>"><?=$sector_term->name?></li>
+                        <li class="cat <?=$sector_term->slug?>" data-filter="<?=$sector_term->slug?>" data-color="<?= $theme ?>"><?=$sector_term->name?></li>
                     <?php } ?>
                 </ul>
             </div>

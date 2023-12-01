@@ -49,10 +49,18 @@ class C12_Case_Studies extends \Elementor\Widget_Base {
                 $sector_terms = get_the_terms($case_study->ID, 'sector');
                 $support_type_terms = get_the_terms($case_study->ID, 'support-type');
 
+                $da_sectors=[];
+                foreach ($sector_terms as $sector_term) {
+                    $da_sectors[] = $sector_term->slug;
+                }
+                $da_support_types=[];
+                foreach ($support_type_terms as $support_type_term) {
+                    $da_support_types[] = $support_type_term->slug;
+                }
                 ?>
 
                 <!-- foreach case study -->
-                        <div class="case-study">
+                        <div class="case-study" data-sector="<?= implode(' | ', $da_sectors) ?>" data-support-type="<?= implode(' | ', $da_support_types) ?>">
                             <div class="main">
                                 <?php
                                 $logo = get_field('company_logo', $case_study->ID);
