@@ -70,6 +70,18 @@
     .image {
         display: none;
         background: var(--e-global-color-text);
+        .swiper {
+            width: 100%;
+            height: 100%;
+            .swiper-slide {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
     }
     @media screen and (min-width: 768px) {
         .gradient { 

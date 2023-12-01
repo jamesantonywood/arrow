@@ -163,6 +163,12 @@ $available_addons = [
         'version'   => '1.0.0',
         'enabled'  =>  true
     ],
+    [
+        'classname' => '\C12_Academic_Testimonial',
+        'include' => __DIR__ . '/widgets/c12-academic-testimonial.php',
+        'version'   => '1.0.0',
+        'enabled'  =>  true
+    ],
 ];
 
 $blacklisted_addons = [];

@@ -25,10 +25,18 @@
             h1 {
                 margin: 0;
             }
+            p {
+                margin-bottom: 5px;
+            }
+            .footnote {
+                color: var(--e-global-color-accent);
+                font-style: italic;
+            }
             .subline {
                 font-size: 2em;
                 font-weight: 700;
                 line-height: 1.1;
+                margin-bottom: 15px;
             }
             .meta {
                 margin-top: 24px;
@@ -47,6 +55,12 @@
                         right: 0;
                         top: 50%;
                         transform: translateY(-50%);
+                    }
+                    &:hover {
+                        color: var(--e-global-color-text);
+                        svg path {
+                            fill: var(--e-global-color-text);
+                        }
                     }
                 }
                 

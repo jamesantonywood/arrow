@@ -60,7 +60,13 @@ class C12_Testimonials extends \Elementor\Widget_Base {
                                 <div class="testimonial">
                                 
                                     <div class="credit">
-                                        <div class="image"></div>
+                                    <div class="image">
+                                            <?php if(get_field('headshot', $testimonial->ID)) : ?>
+                                            <img src="<?= get_field('headshot', $testimonial->ID)['url'] ?>">
+                                            <?php else : ?>
+                                                <?= file_get_contents(plugins_url('../../assets/img/icons/sillouhette.svg', __FILE__)); ?>
+                                            <?php endif; ?>
+                                        </div>
                                         <div class="content">
                                             <h5><?= get_field('name', $testimonial->ID); ?></h5>
                                             <p><?= get_field('role', $testimonial->ID); ?></p>
@@ -88,7 +94,13 @@ class C12_Testimonials extends \Elementor\Widget_Base {
                                 <a href="<?= the_permalink($testimonial->ID); ?>">
                                 <div class="testimonial">
                                     <div class="credit">
-                                        <div class="image"></div>
+                                        <div class="image">
+                                            <?php if(get_field('headshot', $testimonial->ID)) : ?>
+                                            <img src="<?= get_field('headshot', $testimonial->ID)['url'] ?>">
+                                            <?php else : ?>
+                                                <?= file_get_contents(plugins_url('../../assets/img/icons/sillouhette.svg', __FILE__)); ?>
+                                            <?php endif; ?>
+                                        </div>
                                         <div class="content">
                                             <h5><?= get_field('name', $testimonial->ID); ?></h5>
                                             <p><?= get_field('role', $testimonial->ID); ?></p>

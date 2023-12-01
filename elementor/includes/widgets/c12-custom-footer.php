@@ -53,7 +53,7 @@ class C12_Custom_Footer extends \Elementor\Widget_Base {
                             <h4>About</h4>
                             <?= wp_nav_menu(array('menu' => 'footer-menu-1')); ?></nav>
                         <nav>
-                            <h4>What we do</h4>
+                            <h4>How it works</h4>
                             <?= wp_nav_menu(array('menu' => 'footer-menu-2')); ?></nav>
                         <nav>
                             <h4>News</h4>

@@ -13,5 +13,9 @@
         color: var(--e-global-color-6d34e3e);
         border-radius: 5px 10px 10px 5px;
         text-transform: uppercase;
+
+        a {
+            color: var(--e-global-color-6d34e3e) !important;
+        }
     }
 }

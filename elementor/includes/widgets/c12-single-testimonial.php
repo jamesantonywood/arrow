@@ -90,7 +90,7 @@ class C12_Single_Testimonial extends \Elementor\Widget_Base {
                     <div class="close-quote"><img src="<?= plugins_url('../../assets/img/close_quote.png', __FILE__); ?>"></div>
                     <?= $settings['quote']; ?>
                     <cite class="credit">
-                        <div class="image"></div>
+                        <div class="image"> <?= file_get_contents(plugins_url('../../assets/img/icons/sillouhette.svg', __FILE__)); ?></div>
                         <div class="content">
                             <h5><?= $settings['name']; ?></h5>
                             <p><?= $settings['role']; ?></p>

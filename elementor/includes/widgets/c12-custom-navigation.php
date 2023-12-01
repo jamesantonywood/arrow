@@ -53,7 +53,15 @@ class C12_Custom_Navigation extends \Elementor\Widget_Base {
                 </div>
                 <div class="gradient"></div>
                 <div class="image">
-
+                    <!-- Slider main container -->
+                <div class="swiper menu-swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="<?= plugins_url("../../assets/img/home.jpg", __FILE__); ?>"></div>
+                        
+                    </div>
+                </div>
                 </div>
             </div>
             <div class="c12-widget c12-custom-navigation">

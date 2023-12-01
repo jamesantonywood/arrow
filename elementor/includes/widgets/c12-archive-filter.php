@@ -38,24 +38,30 @@ class C12_Archive_Filter extends \Elementor\Widget_Base {
 
     protected function render() {
         $settings = $this->get_settings_for_display();
+        $categories = get_categories( array(
+            'orderby' => 'name',
+            'order'   => 'ASC'
+        ) );
         ?>
             <div class="c12-widget c12-archive-sidebar">
                 <div class="filter-group">
                     <h3>Categories</h3>
                     <ul class="categories">
-                        <li class="cat">Agriculture</li>
-                        <li class="cat">Environmental Science</li>
-                        <li class="cat">Sustainability</li>
+                        <?php foreach($categories as $category) : ?>
+                            <li class="cat"><a href="<?= get_category_link( $category->term_id ); ?>"><?= $category->name; ?></a></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
                 <div class="filter-group">
                     <h3>Archives</h3>
                     <ul>
-                        <li>November</li>
-                        <li>October</li>
-                        <li>September</li>
+                    <?php wp_get_archives(array(
+                    'show_post_count' => true,
+                    )) ?>
                     </ul>
                 </div>
+
+                
             </div>
         <?php
     }

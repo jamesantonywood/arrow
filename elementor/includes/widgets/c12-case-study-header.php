@@ -46,9 +46,20 @@ class C12_Case_Study_Header extends \Elementor\Widget_Base {
                         <?php if(get_field('subline')) : ?>
                             <p class="subline"><?= get_field('subline'); ?></p>
                         <?php endif; ?>
+
+                        <?php if(get_field('main_line')) : ?>
+                            <p><?= get_field('main_line'); ?></p>
+                        <?php endif;?>
+
                         <?php if(get_field('excerpt')) : ?>
                             <p><?= get_field('excerpt'); ?></p>
                         <?php endif; ?>
+
+                        <?php if(get_field('footnote')) : ?>
+                            <p class="footnote"><small><?= get_field('footnote'); ?></small></p>
+                        <?php endif; ?>
+
+
                         <div class="meta">
                             <?php if (get_field('location')) : ?>
                             <p><?= get_field('location'); ?></p>
