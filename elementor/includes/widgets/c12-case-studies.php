@@ -33,9 +33,6 @@ class C12_Case_Studies extends \Elementor\Widget_Base {
 
     }
 
-
-
-
     protected function render() {
         $case_studies = get_posts([
             'post_type' => 'case-studies',
@@ -47,7 +44,12 @@ class C12_Case_Studies extends \Elementor\Widget_Base {
         ?>
             <div class="c12-widget c12-case-studies">
                 <div class="case-studies">
-                <?php foreach ($case_studies as $case_study) { ?>
+                <?php foreach ($case_studies as $case_study) {
+                // get sector taxonomies for $case_study
+                $sector_terms = get_the_terms($case_study->ID, 'sector');
+                $support_type_terms = get_the_terms($case_study->ID, 'support-type');
+
+                ?>
 
                 <!-- foreach case study -->
                         <div class="case-study">
@@ -63,10 +65,16 @@ class C12_Case_Studies extends \Elementor\Widget_Base {
                                 <a href="<?= get_permalink($case_study->ID) ?>">Read case study</a>
                             </div>
                             <div class="categories">
-                                <span class="cat">Agriculture</span>
-                                <span class="cat">Environmental Science</span>
-                                <span class="cat">Sustainability</span>
-                                <span class="cat">Scientific Insights</span>
+                                <?php
+                                foreach ($sector_terms as $sector_term) {
+                                    $theme = get_field('theme',$sector_term->taxonomy . '_' . $sector_term->term_id);
+                                    echo '<span class="cat" data-color="'.$theme.'">' . $sector_term->name . '</span>';
+                                }
+                                foreach ($support_type_terms as $support_type_term) {
+                                    $theme = get_field('theme',$support_type_term->taxonomy . '_' . $support_type_term->term_id);
+                                    echo '<span class="cat" data-color="'.$theme.'">' . $support_type_term->name . '</span>';
+                                }
+                                ?>
                             </div>
                         </div>
                     <!-- end -->
