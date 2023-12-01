@@ -4,12 +4,15 @@
     padding: 72px 0;
     border-top: 1px solid var(--e-global-color-secondary);
     max-width: 100%;
+    .swiper-pagination-bullets {
+        text-align: center;
+    }
     .stat {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
         gap: 36px;
+        flex-wrap: nowrap ;
         div {
             // border: 1px solid red;
             flex: 1 40%;
@@ -27,11 +30,12 @@
             img {
                 display: block;
                 flex: 0 1 auto;
-                height: auto; 
+                height: auto;
                 // max-width: 33%; // dynamically set?
                 min-width: 10px;
                 width: auto;
                 object-fit: contain;
+                max-height: 350px;
             }
         }
 
@@ -63,8 +67,29 @@
             height: 16px;
             background-color: var(--e-global-color-secondary);
             border-radius: 50%;
-            
-            
+
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .c12-stats {
+        padding: 36px 0;
+        .stat {
+            flex-wrap: wrap;
+            .number {
+                flex: 1 100%;
+                margin-bottom: 0;
+                img {
+                    max-height: 200px;
+                }
+            }
+            .text {
+                font-size: 2.5em;
+                min-width: 0;
+            }
         }
     }
 
