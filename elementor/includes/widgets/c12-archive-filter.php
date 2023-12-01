@@ -48,7 +48,7 @@ class C12_Archive_Filter extends \Elementor\Widget_Base {
                     <h3>Categories</h3>
                     <ul class="categories">
                         <?php foreach($categories as $category) : ?>
-                            <li class="cat"><a href="<?= get_category_link( $category->term_id ); ?>"><?= $category->name; ?></a></li>
+                            <li class="cat active"><a href="<?= get_category_link( $category->term_id ); ?>"><?= $category->name; ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
@@ -56,14 +56,11 @@ class C12_Archive_Filter extends \Elementor\Widget_Base {
                     <h3>Archives</h3>
                     <ul>
                     <?php wp_get_archives(array(
-                    'show_post_count' => true,
-                    )) ?>
+                        'show_post_count' => true,
+                    )); ?>
                     </ul>
                 </div>
-
-                
             </div>
         <?php
     }
-
 }

@@ -4,40 +4,39 @@
     gap: 8px;
     margin-top: 40px;
     .cat {
-        opacity: 0.5;
         cursor: pointer;
         display: inline-block;
         font-size: 0.625em;
         padding: 12px 10px 10px 7px;
         line-height: 0;
-        background: var(--e-global-color-primary);
-        color: var(--e-global-color-6d34e3e);
+        background: var(--e-global-color-secondary);
+        color: var(--e-global-color-accent);
         border-radius: 5px 10px 10px 5px;
         text-transform: uppercase;
 
         &.active {
-            opacity: 1;
+            &[data-color="blue"] {
+                background: var(--e-global-color-4507a68);
+                color: var(--e-global-color-a70a27c);
+            }
+            &[data-color="purple"] {
+                background: var(--e-global-color-a5ade05);
+                color: var(--e-global-color-a70a27c);
+            }
+            &[data-color="red"] {
+                background: var(--e-global-color-670b45c);
+                color: var(--e-global-color-c4adec4);
+            }
+            &[data-color="yellow"] {
+                background: var(--e-global-color-2ee2a9c);
+                color: var(--e-global-color-6d34e3e);
+            }
+            &[data-color="green"] {
+                background: var(--e-global-color-bc2e963);
+                color: var(--e-global-color-a0af9ef);
+            }
         }
 
-        &[data-color="blue"] {
-            background: var(--e-global-color-4507a68);
-            color: #fff;
-        }
-        &[data-color="purple"] {
-            background: rgba(51,54,107,1);
-            color: #fff;
-        }
-        &[data-color="red"] {
-            background: rgba(200,22,24,1);
-            color: #fff;
-        }
-        &[data-color="yellow"] {
-            background: var(--e-global-color-2ee2a9c);
-            color: #fff;
-        }
-        &[data-color="green"] {
-            background: rgba(16,94,67,1);
-            color: #fff;
-        }
+       
     }
 }
