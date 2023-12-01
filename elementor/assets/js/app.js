@@ -9993,6 +9993,33 @@ return Splitting;
 
 /***/ }),
 
+/***/ "./src/js/modules/case-studies.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/case-studies.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+    jQuery(function() {
+        jQuery('.c12-filter-sidebar .categories .cat').click(function() {
+            jQuery('.c12-filter-sidebar .categories .cat').removeClass('active');
+            jQuery(this).addClass('active');
+        });
+
+        jQuery('.c12-filter-sidebar .categories .cat').addClass('active');
+        jQuery('.c12-case-studies .categories .cat').addClass('active');
+        jQuery('.c12-case-study-header .categories .cat').addClass('active');
+    })
+});
+
+
+/***/ }),
+
 /***/ "./src/js/modules/swipers.js":
 /*!***********************************!*\
   !*** ./src/js/modules/swipers.js ***!
@@ -20468,6 +20495,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var splitting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! splitting */ "./node_modules/splitting/dist/splitting.js");
 /* harmony import */ var splitting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(splitting__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_swipers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/swipers */ "./src/js/modules/swipers.js");
+/* harmony import */ var _modules_case_studies__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/case-studies */ "./src/js/modules/case-studies.js");
 
 
 
@@ -20477,8 +20505,10 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
 
 
 
+
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_4__["default"])()
-// 
+;(0,_modules_case_studies__WEBPACK_IMPORTED_MODULE_5__["default"])()
+//
 
 const marquee = () => {
     const marqueeContainers = document.querySelectorAll('.marquee-container')
@@ -20489,7 +20519,7 @@ const marquee = () => {
         dir === 'left' ? operator = '-' : operator = ''
         const item = marquee.querySelector('.marquee-item').cloneNode(true)
         marquee.appendChild(item)
-       
+
         const animation = marquee.animate([
             { transform: `translate(0, 0)` },
             { transform: `translate(${operator}50%, 0)` }
@@ -20544,8 +20574,8 @@ const whatWeDoAnimation = () => {
     const topArm = testArrow.querySelector('.top-arm')
 
     const timeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-        defaults: { 
-            scrollTrigger: {   
+        defaults: {
+            scrollTrigger: {
                 trigger: stepsTag,
                 start: 'top bottom',
                 end: 'top top',
@@ -20589,7 +20619,7 @@ const scroll = () => {
         const start = (0,_modules_utils__WEBPACK_IMPORTED_MODULE_0__.cssVar)(title.getAttribute('data-start'))
         const end = (0,_modules_utils__WEBPACK_IMPORTED_MODULE_0__.cssVar)(title.getAttribute('data-end'))
         const chars = title.querySelectorAll('.char')
-       
+
         gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.fromTo(chars, {
             'will-change': 'color',
             color: start,

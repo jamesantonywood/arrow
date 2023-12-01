@@ -1,0 +1,59 @@
+
+.c12-academic-testimonial {
+    padding: 75px;
+    margin: 50px auto;
+    color: var(--white);
+    background: var(--e-global-color-text);
+    border-radius: 75px;
+    blockquote {
+        // max-width: 844px;
+        margin: 0 auto;
+        padding: 90px 0; 
+        font-size: 1.25em;
+        font-weight: 400;
+        line-height: 1.5;
+        position: relative;
+        .open-quote,
+        .close-quote {
+            content: '';
+            // border: 1px solid red;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 0;
+            left: 0;
+        }
+       .close-quote {
+            top: unset;
+            left: unset;
+            bottom: 0;
+            right: 0;
+        }
+        .credit {
+            font-size: 1rem;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            .image {
+                width: 40px;
+                height: 40px;
+                svg {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            h5 {
+                font-size: 1em;
+            }
+            p {
+                font-size: 0.875em;
+                line-height: 1;
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 75px;
+    }
+}
