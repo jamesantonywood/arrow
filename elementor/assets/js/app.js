@@ -10010,11 +10010,6 @@ __webpack_require__.r(__webpack_exports__);
             jQuery('.c12-filter-sidebar .categories .cat').removeClass('active');
             jQuery(this).addClass('active');
 
-            console.log(jQuery(this).attr('data-filter'));
-            console.log(".c12-case-studies .case-study[data-sector *='" + jQuery(this).attr('data-filter') + "']");
-            console.log(".c12-case-studies .case-study[data-support-type*='" + jQuery(this).attr('data-filter') + "']");
-            
-
             jQuery('.c12-case-studies .case-study').hide();
             jQuery(".c12-case-studies .case-study[data-sector*='" + jQuery(this).attr('data-filter') + "']").show();
             jQuery(".c12-case-studies .case-study[data-support-type*='" + jQuery(this).attr('data-filter') + "']").show();
@@ -20513,8 +20508,6 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
 
 
 
-
-
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_4__["default"])()
 ;(0,_modules_case_studies__WEBPACK_IMPORTED_MODULE_5__["default"])()
 //
@@ -20547,29 +20540,6 @@ const marquee = () => {
     })
 }
 marquee()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const mq870 = window.matchMedia('(min-width: 870px)')
 
@@ -20648,30 +20618,14 @@ const scroll = () => {
 }
 scroll()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const menuBtn = document.querySelector('.menu-btn')
-menuBtn.addEventListener('click', () => {
-    document.body.classList.toggle('menu-open')
-    menuBtn.classList.toggle('is-active')
-    handleFixedBody()
-})
-
+if(menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        document.body.classList.toggle('menu-open')
+        menuBtn.classList.toggle('is-active')
+        handleFixedBody()
+    })
+}
 // TODO: This isnt the greatest!...
 // let prev = 0
 // const mainMenu = document.querySelector('.c12-custom-navigation')

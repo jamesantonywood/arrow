@@ -31,7 +31,7 @@ class C12_Home_Hero extends \Elementor\Widget_Base {
     }
 
     protected function register_controls() {
-        
+
     }
 
     protected function render() {
@@ -41,7 +41,7 @@ class C12_Home_Hero extends \Elementor\Widget_Base {
                 <div class="inner">
                     <div class="content">
                         <h1 class="jumbotron">Supercharge Your Business</h1>
-                        <p>Growing a business brings a variety of challenges, but you don’t have to do it all alone.</p>
+                        <p>Growing a business in the North East brings a variety of challenges, but you don’t have to do it all alone.</p>
                         <div class="cta">
                             <a href="#"><span>Ready to innovate?</span></a>
                         </div>

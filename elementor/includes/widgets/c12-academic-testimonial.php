@@ -79,7 +79,7 @@ class C12_Academic_Testimonial extends \Elementor\Widget_Base {
 		);
 
         $this->end_controls_section();
-    } 
+    }
 
     protected function render() {
         $settings = $this->get_settings_for_display();
@@ -90,7 +90,7 @@ class C12_Academic_Testimonial extends \Elementor\Widget_Base {
                     <div class="close-quote"><img src="<?= plugins_url('../../assets/img/close_quote.png', __FILE__); ?>"></div>
                     <?= $settings['quote']; ?>
                     <cite class="credit">
-                        <div class="image"> <?= file_get_contents(plugins_url('../../assets/img/icons/sillouhette.svg', __FILE__)); ?></div>
+                        <div class="image"> <?= file_get_contents(dirname(dirname(__FILE__)).('../../assets/img/icons/sillouhette.svg')); ?></div>
                         <div class="content">
                             <h5><?= $settings['name']; ?></h5>
                             <p><?= $settings['role']; ?></p>

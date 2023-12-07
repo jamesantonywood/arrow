@@ -32,7 +32,7 @@ class C12_Thank_You extends \Elementor\Widget_Base {
 
     protected function register_controls() {
 
-        // CONTENT 
+        // CONTENT
         $this->start_controls_section(
 			'content_section',
 			[
@@ -389,6 +389,7 @@ class C12_Thank_You extends \Elementor\Widget_Base {
                             Thank you
                         </h1>
                         <div class="cta">
+                            <p>A member of the Arrow team will review your submission and contact you shortly.</p>
                             <a class="button button--calypso" href="/"><span>Back home</span></a>
                         </div>
                     </div>

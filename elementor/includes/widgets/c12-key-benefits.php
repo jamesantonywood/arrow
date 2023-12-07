@@ -148,7 +148,7 @@ class C12_Key_Benefits extends \Elementor\Widget_Base {
                 <div class="benefit">
                     <div class="background"></div>
                     <div class="icon">
-                    <?= file_get_contents(plugins_url('../../assets/img/icons/key-benefits/' . $item['icon'] . '.svg', __FILE__)); ?>
+                    <?= file_get_contents(dirname(dirname(__FILE__)).('../../assets/img/icons/key-benefits/' . $item['icon'] . '.svg')); ?>
                     </div>
                     <div class="content">
                         <h3><?=$item['title']?></h3>

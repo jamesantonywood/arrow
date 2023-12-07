@@ -6,8 +6,6 @@ import Splitting from "splitting"
 import swipers from "./modules/swipers"
 import caseStudies from "./modules/case-studies"
 
-
-
 swipers()
 caseStudies()
 //
@@ -40,29 +38,6 @@ const marquee = () => {
     })
 }
 marquee()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const mq870 = window.matchMedia('(min-width: 870px)')
 
@@ -141,30 +116,14 @@ const scroll = () => {
 }
 scroll()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const menuBtn = document.querySelector('.menu-btn')
-menuBtn.addEventListener('click', () => {
-    document.body.classList.toggle('menu-open')
-    menuBtn.classList.toggle('is-active')
-    handleFixedBody()
-})
-
+if(menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        document.body.classList.toggle('menu-open')
+        menuBtn.classList.toggle('is-active')
+        handleFixedBody()
+    })
+}
 // TODO: This isnt the greatest!...
 // let prev = 0
 // const mainMenu = document.querySelector('.c12-custom-navigation')

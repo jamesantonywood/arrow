@@ -31,7 +31,7 @@ class C12_Testimonials extends \Elementor\Widget_Base {
     }
 
     protected function register_controls() {
-        
+
     }
 
     protected function render() {
@@ -58,13 +58,13 @@ class C12_Testimonials extends \Elementor\Widget_Base {
                             <?php foreach($row_1 as $testimonial) : ?>
                                 <a href="<?= the_permalink($testimonial->ID); ?>">
                                 <div class="testimonial">
-                                
+
                                     <div class="credit">
                                     <div class="image">
                                             <?php if(get_field('headshot', $testimonial->ID)) : ?>
                                             <img src="<?= get_field('headshot', $testimonial->ID)['url'] ?>">
                                             <?php else : ?>
-                                                <?= file_get_contents(plugins_url('../../assets/img/icons/sillouhette.svg', __FILE__)); ?>
+                                                <?= file_get_contents(dirname(dirname(__FILE__)).'../../assets/img/icons/sillouhette.svg'); ?>
                                             <?php endif; ?>
                                         </div>
                                         <div class="content">
@@ -74,17 +74,17 @@ class C12_Testimonials extends \Elementor\Widget_Base {
                                     </div>
                                     <div class="quote"><?= get_field('quote', $testimonial->ID); ?></div>
                                     <div class="button">
-                                        Read Case Study
+                                        Read Success Story
                                     </div>
-                                    
+
                                 </div>
                                 </a>
                             <?php endforeach; ?>
                             <!-- End foreach -->
                         </div>
                     </div>
-                </div>   
-                
+                </div>
+
                 <!-- Second Row -->
                 <div class="testimonial-row marquee-container">
                     <div class="marquee" data-direction="right">
@@ -98,7 +98,7 @@ class C12_Testimonials extends \Elementor\Widget_Base {
                                             <?php if(get_field('headshot', $testimonial->ID)) : ?>
                                             <img src="<?= get_field('headshot', $testimonial->ID)['url'] ?>">
                                             <?php else : ?>
-                                                <?= file_get_contents(plugins_url('../../assets/img/icons/sillouhette.svg', __FILE__)); ?>
+                                                <?= file_get_contents(dirname(dirname(__FILE__)).('../../assets/img/icons/sillouhette.svg')); ?>
                                             <?php endif; ?>
                                         </div>
                                         <div class="content">
@@ -108,17 +108,17 @@ class C12_Testimonials extends \Elementor\Widget_Base {
                                     </div>
                                     <div class="quote"><?= get_field('quote', $testimonial->ID); ?></div>
                                     <div class="button">
-                                        Read Case Study
+                                        Read Success Story
                                     </div>
-                                    
-                                    
+
+
                                 </div>
                                 </a>
                             <?php endforeach; ?>
                             <!-- End foreach -->
                         </div>
                     </div>
-                </div>   
+                </div>
             </div>
         <?php
     }

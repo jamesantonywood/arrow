@@ -30,7 +30,7 @@ class C12_Key_People extends \Elementor\Widget_Base {
     }
 
     protected function register_controls() {
-        
+
     }
 
     protected function render() {
@@ -44,9 +44,9 @@ class C12_Key_People extends \Elementor\Widget_Base {
                         <div class="credit">
                             <div class="image">
                                 <?php if(!empty($person['headshot'])) : ?>
-                                    <img src="<?= $person['headshot']['url'] ?>">     
+                                    <img src="<?= $person['headshot']['url'] ?>">
                                 <?php else : ?>
-                                    <?= file_get_contents(plugins_url('../../assets/img/icons/sillouhette.svg', __FILE__)); ?>
+                                    <?= file_get_contents(dirname(dirname(__FILE__)).('../../assets/img/icons/sillouhette.svg')); ?>
                                 <?php endif; ?>
 
                             </div>

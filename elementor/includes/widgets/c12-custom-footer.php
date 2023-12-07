@@ -31,7 +31,7 @@ class C12_Custom_Footer extends \Elementor\Widget_Base {
     }
 
     protected function register_controls() {
-        
+
     }
 
     protected function render() {
@@ -57,7 +57,7 @@ class C12_Custom_Footer extends \Elementor\Widget_Base {
                             <?= wp_nav_menu(array('menu' => 'footer-menu-2')); ?></nav>
                         <nav>
                             <h4>News</h4>
-                            
+
                             <?php $news_posts = get_posts([
                                 'post_type' => 'post',
                                 'posts_per_page' => 3,
@@ -79,7 +79,7 @@ class C12_Custom_Footer extends \Elementor\Widget_Base {
                     </div>
                     <div class="secondary">
                         <nav><?= wp_nav_menu(array('menu' => 'footer-secondary-menu')); ?></nav>
-                        <p class="copyright">&copy;<?= date('Y'); ?> <?= get_bloginfo( 'name' ); ?></p>
+                        <p class="copyright">&copy;<?= date('Y'); ?> Newcastle University</p>
                     </div>
                 </div>
             </div>

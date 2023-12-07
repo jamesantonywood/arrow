@@ -48,7 +48,15 @@
             flex-grow: 0;
             width: 100%;
             min-width: 19rem;
-            // text-align: center;
+            flex-direction: column;
+
+
+            .footnote {
+                font-size: 15px;
+                display: block;
+                line-height: 1.5em;
+                margin-top: 40px;
+            }
         }
 
 
@@ -88,6 +96,8 @@
             .text {
                 font-size: 2.5em;
                 min-width: 0;
+
+
             }
         }
     }

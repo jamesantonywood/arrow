@@ -74,7 +74,13 @@ class C12_Flip_Boxes extends \Elementor\Widget_Base {
                             'life-sciences' => esc_html__( 'Life Sciences', 'textdomain' ),
                             'engineering' => esc_html__( 'Engineering', 'textdomain' ),
                             'advanced-materials' => esc_html__( 'Advanced Materials', 'textdomain' ),
-                        ],
+                            'one-to-one' => esc_html__( 'One to one', 'textdomain' ),
+                            'innovation-support' => esc_html__( 'Innovation support', 'textdomain' ),
+                            'research-and-development'  => esc_html__( 'Research and development', 'textdomain' ),
+                            'proof-and-concept' => esc_html__( 'Proof of concept', 'textdomain' ),
+                            'specialist-data' => esc_html__( 'Specialist data', 'textdomain' ),
+                            'equipment' => esc_html__( 'Equipment', 'textdomain' ),
+                            ],
                         'selectors' => [
                             '{{WRAPPER}} .your-class' => 'border-style: {{VALUE}};',
                         ],
@@ -102,7 +108,7 @@ class C12_Flip_Boxes extends \Elementor\Widget_Base {
                 <div class="flip-box">
                     <div class="front">
                         <div class="icon">
-                            <?= file_get_contents(plugins_url('../../assets/img/icons/flip-boxes/' . $box['icon'] . '.svg', __FILE__)); ?>
+                            <?= file_get_contents(dirname(dirname(__FILE__)).('../../assets/img/icons/flip-boxes/' . $box['icon'] . '.svg')); ?>
                         </div>
                         <h3><?= $box['flip_box_title']; ?></h3>
                     </div>

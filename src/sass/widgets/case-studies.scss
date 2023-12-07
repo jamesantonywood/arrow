@@ -4,13 +4,13 @@
     // min-height: 100vh;
     position: relative;
     padding-right: 50px;
-    
+
     h2 {
         font-size: 1.5em;
     }
     .filter-group {
         width: 100%;
-        
+
         h3 {
             font-size: 1em;
             font-weight: 400;
@@ -33,7 +33,7 @@
                     width: max-content;
                 }
             }
-        } 
+        }
         @media screen and (min-width: 768px) {
             min-width: 200px;
             max-width: 250px;
@@ -51,7 +51,7 @@
                 &.categories {
                     flex-direction: column;
                 }
-            } 
+            }
         }
     }
 }
@@ -105,17 +105,18 @@
 .c12-case-studies {
 
     padding-top: 48px;
-    
 
-  
+
+
     .case-study {
+        cursor: pointer;
         border-radius: 10px;
         background-color: var(--e-global-color-secondary);
         margin-bottom: 16px;
         &:last-child {
             margin-bottom: 0;
         }
-        
+
         .main {
             padding: 16px 16px 0;
             position: relative;
@@ -171,7 +172,7 @@
             }
         }
 
-    
+
 
     }
 
@@ -204,5 +205,5 @@
         }
     }
 
-  
+
 }

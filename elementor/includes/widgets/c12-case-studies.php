@@ -60,7 +60,7 @@ class C12_Case_Studies extends \Elementor\Widget_Base {
                 ?>
 
                 <!-- foreach case study -->
-                        <div class="case-study" data-sector="<?= implode(' | ', $da_sectors) ?>" data-support-type="<?= implode(' | ', $da_support_types) ?>">
+                        <div class="case-study" onclick="window.location='<?= get_permalink($case_study->ID) ?>';" data-sector="<?= implode(' | ', $da_sectors) ?>" data-support-type="<?= implode(' | ', $da_support_types) ?>">
                             <div class="main">
                                 <?php
                                 $logo = get_field('company_logo', $case_study->ID);
@@ -70,7 +70,7 @@ class C12_Case_Studies extends \Elementor\Widget_Base {
 
                                 <h2><?= get_field('subline',$case_study->ID); ?></h2>
                                 <p><?= get_field('location', $case_study->ID); ?></p>
-                                <a href="<?= get_permalink($case_study->ID) ?>">Read case study</a>
+                                <a href="<?= get_permalink($case_study->ID) ?>">Read Success Story</a>
                             </div>
                             <div class="categories">
                                 <?php
